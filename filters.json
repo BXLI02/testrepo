@@ -1,0 +1,5048 @@
+{
+  "filters": [
+    {
+      "key": "age_groups",
+      "search_key": "filter_age_group",
+      "url_key": "gender",
+      "app_url_key": "age_group",
+      "sorting_strategy": "custom",
+      "kind": "values",
+      "translation_strategy": "basic-zatra",
+      "label_translation_key": "catalog.article.targetGroupAgeGroup",
+      "position": 170,
+      "basic": true,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "BABIES",
+            "label_translation_key": "filter.targetgroup.ageGroupBaby"
+          },
+          {
+            "value": "KIDS",
+            "label_translation_key": "filter.targetgroup.ageGroupKid"
+          },
+          {
+            "value": "TEEN",
+            "label_translation_key": "filter.targetgroup.ageGroupTeen"
+          }
+        ]
+      }
+    },
+    {
+      "key": "assortment_areas",
+      "search_key": "filter_assortment_area",
+      "url_key": "assortment_area",
+      "app_url_key": "assortment_area",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "custom"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "basic-zatra",
+      "label_translation_key": "catalog.filter.assortmentArea",
+      "position": 330,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "STANDARD",
+            "label_translation_key": "shop.navigation.filter.assortmentArea.standard",
+            "url_translation_key": "shop.navigation.filter.assortmentArea.standard.urlKey"
+          },
+          {
+            "value": "MATERNITY",
+            "label_translation_key": "shop.navigation.filter.assortmentArea.maternity",
+            "url_translation_key": "shop.navigation.filter.assortmentArea.maternity.urlKey"
+          },
+          {
+            "value": "PLUS_SIZE",
+            "label_translation_key": "shop.navigation.filter.assortmentArea.plusSize",
+            "url_translation_key": "shop.navigation.filter.assortmentArea.plusSize.urlKey"
+          },
+          {
+            "value": "PETITE",
+            "label_translation_key": "shop.navigation.filter.assortmentArea.petite",
+            "url_translation_key": "shop.navigation.filter.assortmentArea.petite.urlKey"
+          },
+          {
+            "value": "TALL",
+            "label_translation_key": "shop.navigation.filter.assortmentArea.tall",
+            "url_translation_key": "shop.navigation.filter.assortmentArea.tall.urlKey"
+          }
+        ]
+      }
+    },
+    {
+      "key": "your_brands",
+      "search_key": "your_brands",
+      "url_key": "your_brands",
+      "app_url_key": "your_brands",
+      "sorting_strategy": "label",
+      "kind": "single_value",
+      "translation_strategy": "boolean-zatra",
+      "label_translation_key": "filter.description.yourbrands",
+      "position": 140,
+      "visible": {
+        "state": "disabled"
+      },
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "true",
+            "label_translation_key": "catalog.article.your_brands"
+          }
+        ]
+      },
+      "visibility_rules": {
+        "use_case_whitelist": [
+          "REGULAR-CATALOG",
+          "FULL-TEXT-SEARCH"
+        ]
+      }
+    },
+    {
+      "key": "followed_brands",
+      "search_key": "followed_brands",
+      "url_key": "followed_brand",
+      "app_url_key": "followed_brand",
+      "sorting_strategy": "brand",
+      "kind": "values",
+      "translation_strategy": "brand_translation",
+      "label_translation_key": "filter.description.yourbrands",
+      "position": 140,
+      "visible": {
+        "state": "enabled"
+      },
+      "values_config": {
+        "filter_value_transformation": {
+          "transformers": ["uppercase"]
+        }
+      },
+      "visibility_rules": {
+        "use_case_whitelist": [
+          "REGULAR-CATALOG",
+          "FULL-TEXT-SEARCH"
+        ]
+      }
+    },
+    {
+      "key": "brands",
+      "family_key": "brand_families",
+      "search_key": "brand_code",
+      "url_key": "brand",
+      "app_url_key": "brand",
+      "sorting_strategy": "brand",
+      "kind": "values",
+      "translation_strategy": "brand_translation",
+      "label_translation_key": "catalog.article.brand",
+      "position": 140,
+      "basic": true,
+      "values_config": {
+        "filter_value_transformation": {
+          "transformers": ["uppercase"]
+        }
+      }
+    },
+    {
+      "key": "brand_families",
+      "search_key": "brand_family",
+      "app_url_key": "brand_family",
+      "url_key": "brand",
+      "sorting_strategy": "brand",
+      "kind": "values",
+      "translation_strategy": "brand_family_translation",
+      "label_translation_key": "catalog.article.brand",
+      "position": 2070,
+      "visible": {
+        "state": "disabled"
+      },
+      "values_config": {}
+    },
+    {
+      "key": "categories",
+      "search_key": "category",
+      "url_key": "category",
+      "app_url_key": "urlKey",
+      "sorting_strategy": "label",
+      "kind": "values",
+      "translation_strategy": "category_translation",
+      "label_translation_key": "catalog.article.categorie",
+      "position": 2080,
+      "visible": {
+        "state": "disabled"
+      },
+      "facet_config": {
+        "exclude_filter_values": false
+      },
+      "values_config": {}
+    },
+    {
+      "key": "colors",
+      "search_key": "filter_color",
+      "url_key": "color",
+      "app_url_key": "color",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "custom"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "basic-zatra",
+      "label_translation_key": "catalog.article.colorFamilyKey",
+      "position": 150,
+      "basic": true,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "BLACK",
+            "label_translation_key": "colorFamily.800.tooltip",
+            "url_translation_key": "colorFamily.800",
+            "metadata": {
+              "hex_code": "#000000"
+            }
+          },
+          {
+            "value": "BROWN",
+            "label_translation_key": "colorFamily.700.tooltip",
+            "url_translation_key": "colorFamily.700",
+            "metadata": {
+              "hex_code": "#6f3e18"
+            }
+          },
+          {
+            "value": "BEIGE",
+            "label_translation_key": "colorFamily.050.tooltip",
+            "url_translation_key": "colorFamily.050",
+            "metadata": {
+              "hex_code": "#d4be8d"
+            }
+          },
+          {
+            "value": "GRAY",
+            "label_translation_key": "colorFamily.100.tooltip",
+            "url_translation_key": "colorFamily.100",
+            "metadata": {
+              "hex_code": "#838383"
+            }
+          },
+          {
+            "value": "WHITE",
+            "label_translation_key": "colorFamily.000.tooltip",
+            "url_translation_key": "colorFamily.000",
+            "metadata": {
+              "hex_code": "#ffffff"
+            }
+          },
+          {
+            "value": "BLUE",
+            "label_translation_key": "colorFamily.500.tooltip",
+            "url_translation_key": "colorFamily.500",
+            "metadata": {
+              "hex_code": "#0f73ad"
+            }
+          },
+          {
+            "value": "PETROL",
+            "label_translation_key": "colorFamily.750.tooltip",
+            "url_translation_key": "colorFamily.750",
+            "metadata": {
+              "hex_code": "#16738f"
+            }
+          },
+          {
+            "value": "TURQUOISE",
+            "label_translation_key": "colorFamily.550.tooltip",
+            "url_translation_key": "colorFamily.550",
+            "metadata": {
+              "hex_code": "#39cbce"
+            }
+          },
+          {
+            "value": "GREEN",
+            "label_translation_key": "colorFamily.600.tooltip",
+            "url_translation_key": "colorFamily.600",
+            "metadata": {
+              "hex_code": "#5ad36c"
+            }
+          },
+          {
+            "value": "OLIVE",
+            "label_translation_key": "colorFamily.650.tooltip",
+            "url_translation_key": "colorFamily.650",
+            "metadata": {
+              "hex_code": "#548b14"
+            }
+          },
+          {
+            "value": "YELLOW",
+            "label_translation_key": "colorFamily.200.tooltip",
+            "url_translation_key": "colorFamily.200",
+            "metadata": {
+              "hex_code": "#fd3"
+            }
+          },
+          {
+            "value": "ORANGE",
+            "label_translation_key": "colorFamily.350.tooltip",
+            "url_translation_key": "colorFamily.350",
+            "metadata": {
+              "hex_code": "#fb863b"
+            }
+          },
+          {
+            "value": "RED",
+            "label_translation_key": "colorFamily.300.tooltip",
+            "url_translation_key": "colorFamily.300",
+            "metadata": {
+              "hex_code": "#ff0002"
+            }
+          },
+          {
+            "value": "PINK",
+            "label_translation_key": "colorFamily.450.tooltip",
+            "url_translation_key": "colorFamily.450",
+            "metadata": {
+              "hex_code": "#f563b9"
+            }
+          },
+          {
+            "value": "PURPLE",
+            "label_translation_key": "colorFamily.400.tooltip",
+            "url_translation_key": "colorFamily.400",
+            "metadata": {
+              "hex_code": "#9349aa"
+            }
+          },
+          {
+            "value": "GOLD",
+            "label_translation_key": "colorFamily.250.tooltip",
+            "url_translation_key": "colorFamily.250",
+            "metadata": {
+              "image": "https://zalando-mosaic-cdn-pnd-test.s3.eu-central-1.amazonaws.com/color-filter/gold.jpg"
+            }
+          },
+          {
+            "value": "SILVER",
+            "label_translation_key": "colorFamily.150.tooltip",
+            "url_translation_key": "colorFamily.150",
+            "metadata": {
+              "image": "https://zalando-mosaic-cdn-pnd-test.s3.eu-central-1.amazonaws.com/color-filter/silver.jpg"
+            }
+          },
+          {
+            "value": "MULTICOLORED",
+            "label_translation_key": "colorFamily.950.tooltip",
+            "url_translation_key": "colorFamily.950",
+            "metadata": {
+              "image": "https://zalando-mosaic-cdn-pnd-test.s3.eu-central-1.amazonaws.com/color-filter/multicolored.jpg"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "key": "genders",
+      "search_key": "filter_gender",
+      "url_key": "gender",
+      "app_url_key": "gender",
+      "sorting_strategy": "custom",
+      "kind": "values",
+      "translation_strategy": "basic-zatra",
+      "label_translation_key": "catalog.article.targetGroupGender",
+      "position": 160,
+      "basic": true,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "FEMALE",
+            "label_translation_key": "filter.targetgroup.genderFemale"
+          },
+          {
+            "value": "MALE",
+            "label_translation_key": "filter.targetgroup.genderMale"
+          }
+        ]
+      }
+    },
+    {
+      "key": "lingerie_details",
+      "search_key": "pandora.lingerie_details",
+      "url_key": "lingerie_detail",
+      "app_url_key": "lingerie_detail",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.filter.lingerie_details",
+      "position": 450,
+      "values_config": {
+        "search_value_transformation": {
+          "transformers": ["lowercase"]
+        },
+        "fixed_values": [
+          {
+            "value": "PADDED_BRA",
+            "label_translation_key": "lingerie_details,1.0.0,lingerie_details_4661"
+          },
+          {
+            "value": "PUSH_UP_BRA",
+            "label_translation_key": "lingerie_details,1.0.0,lingerie_details_4662"
+          },
+          {
+            "value": "REMOVABLE_PADDING",
+            "label_translation_key": "lingerie_details,1.0.0,lingerie_details_4663"
+          },
+          {
+            "value": "REMOVABLE_STRAPS",
+            "label_translation_key": "lingerie_details,1.0.0,lingerie_details_4660"
+          },
+          {
+            "value": "MULTIWAY_STRAPS",
+            "label_translation_key": "lingerie_details,1.0.0,lingerie_details_4664"
+          },
+          {
+            "value": "SHEER",
+            "label_translation_key": "lingerie_details,1.0.0,lingerie_details_4659"
+          },
+          {
+            "value": "UNDERWIRE_BRA",
+            "label_translation_key": "lingerie_details,1.0.0,lingerie_details_4665"
+          },
+          {
+            "value": "NON_WIRED_BRA",
+            "label_translation_key": "lingerie_details,1.0.0,lingerie_details_4666"
+          },
+          {
+            "value": "BREASTFEEDING",
+            "label_translation_key": "skirt_details,1.0.0,skirt_details_7842"
+          }
+        ]
+      }
+    },
+    {
+      "key": "heel_forms",
+      "search_key": "filter_heel_form",
+      "url_key": "heel_form",
+      "app_url_key": "heel_form",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.article.heelForm",
+      "position": 370,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "BLOCK",
+            "label_translation_key": "heel_form,1.0.0,heel_form_324"
+          },
+          {
+            "value": "FLAT",
+            "label_translation_key": "heel_form,1.0.0,heel_form_325"
+          },
+          {
+            "value": "WEDGE",
+            "label_translation_key": "heel_form,1.0.0,heel_form_326"
+          },
+          {
+            "value": "PENNY",
+            "label_translation_key": "heel_form,1.0.0,heel_form_327"
+          },
+          {
+            "value": "FUNNEL",
+            "label_translation_key": "heel_form,1.0.0,heel_form_328"
+          },
+          {
+            "value": "PLATEAU",
+            "label_translation_key": "heel_form,1.0.0,heel_form_3763"
+          },
+          {
+            "value": "PLATEAU_BOOTS",
+            "label_translation_key": "heel_form,1.0.0,heel_form_7293"
+          },
+          {
+            "value": "WEDGE_HIDDEN",
+            "label_translation_key": "heel_form,1.0.0,heel_form_7294"
+          },
+          {
+            "value": "PLATEAU_HIDDEN",
+            "label_translation_key": "heel_form,1.0.0,heel_form_7295"
+          },
+          {
+            "value": "PLATEAU_HEELS",
+            "label_translation_key": "heel_form,1.0.0,heel_form_7296"
+          }
+        ]
+      }
+    },
+    {
+      "key": "heel_heights",
+      "search_key": "pandora.heel_heights",
+      "url_key": "heel_height_range",
+      "app_url_key": "heel_height",
+      "sorting_strategy": "custom",
+      "kind": "values",
+      "translation_strategy": "range-zatra",
+      "label_translation_key": "catalog.article.heelHeight",
+      "position": 380,
+      "values_config": {
+        "search_value_transformation": {
+          "transformers": ["lowercase"]
+        },
+        "label_translation_key_pattern": "catalog.filter.range.filter.heelheight",
+        "fixed_values": [
+          {
+            "value": "XS",
+            "ranges": {
+              "de": {
+                "to": 2
+              },
+              "gb": {
+                "to": 0
+              }
+            }
+          },
+          {
+            "value": "S",
+            "ranges": {
+              "de": {
+                "from": 3,
+                "to": 4
+              },
+              "gb": {
+                "from": 1,
+                "to": 2
+              }
+            }
+          },
+          {
+            "value": "M",
+            "ranges": {
+              "de": {
+                "from": 5,
+                "to": 7
+              },
+              "gb": {
+                "from": 3
+              }
+            }
+          },
+          {
+            "value": "L",
+            "ranges": {
+              "de": {
+                "from": 8,
+                "to": 9
+              }
+            }
+          },
+          {
+            "value": "XL",
+            "ranges": {
+              "de": {
+                "from": 10
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "key": "occasions",
+      "search_key": "pandora.occasions",
+      "url_key": "occasion",
+      "app_url_key": "occasion",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "multi-source",
+      "translation_config": {
+        "multi_source": {
+          "strategies": [
+            "master-attribute",
+            "fashion-tags"
+          ]
+        },
+        "tag_config": {
+          "skip_value_uri_prefix": true
+        }
+      },
+      "label_translation_key": "catalog.article.occasion",
+      "position": 1300,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "business",
+            "label_translation_key": "occasion,1.0.0,occasion_7227"
+          },
+          {
+            "value": "oktoberfest",
+            "label_translation_key": "occasion,1.0.0,occasion_7228"
+          },
+          {
+            "value": "lounge_wear",
+            "label_translation_key": "occasion,1.0.0,occasion_7229"
+          },
+          {
+            "value": "party",
+            "label_translation_key": "occasion,1.0.0,occasion_7231"
+          },
+          {
+            "value": "bridal",
+            "label_translation_key": "occasion,1.0.0,occasion_7868"
+          }
+        ]
+      }
+    },
+    {
+      "key": "patterns",
+      "search_key": "pandora.patterns",
+      "url_key": "pattern",
+      "app_url_key": "pattern",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "multi-source",
+      "translation_config": {
+        "multi_source": {
+          "strategies": [
+            "master-attribute",
+            "fashion-tags"
+          ]
+        },
+        "tag_config": {
+          "skip_value_uri_prefix": true
+        }
+      },
+      "label_translation_key": "catalog.article.pattern",
+      "position": 230,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "animal_print",
+            "label_translation_key": "pattern,1.0.0,pattern_4310"
+          },
+          {
+            "value": "striped",
+            "label_translation_key": "pattern,1.0.0,pattern_4311"
+          },
+          {
+            "value": "colored",
+            "label_translation_key": "pattern,1.0.0,pattern_4312"
+          },
+          {
+            "value": "polka_dot",
+            "label_translation_key": "pattern,1.0.0,pattern_4313"
+          },
+          {
+            "value": "floral",
+            "label_translation_key": "pattern,1.0.0,pattern_4314"
+          },
+          {
+            "value": "checked",
+            "label_translation_key": "pattern,1.0.0,pattern_4315",
+            "search_values": ["checked", "checkered"]
+          },
+          {
+            "value": "paisley",
+            "label_translation_key": "pattern,1.0.0,pattern_4316"
+          },
+          {
+            "value": "plain",
+            "label_translation_key": "pattern,1.0.0,pattern_5322"
+          },
+          {
+            "value": "print",
+            "label_translation_key": "pattern,1.0.0,pattern_7275"
+          },
+          {
+            "value": "burnout",
+            "label_translation_key": "pattern,1.0.0,pattern_7276"
+          },
+          {
+            "value": "herring_bone",
+            "label_translation_key": "pattern,1.0.0,pattern_7277"
+          },
+          {
+            "value": "camouflage",
+            "label_translation_key": "pattern,1.0.0,pattern_7278"
+          },
+          {
+            "value": "flecked",
+            "label_translation_key": "pattern,1.0.0,pattern_7279"
+          },
+          {
+            "value": "pinstripe",
+            "label_translation_key": "pattern,1.0.0,pattern_7280"
+          },
+          {
+            "value": "gradient",
+            "label_translation_key": "pattern,1.0.0,pattern_7281"
+          },
+          {
+            "value": "photo_print",
+            "label_translation_key": "pattern,1.0.0,pattern_7282"
+          }
+        ]
+      },
+      "post_processors": [
+        "fkg_intended_gender"
+      ]
+    },
+    {
+      "key": "prices",
+      "search_key": "prices",
+      "simple_search_key": "simples.search_price",
+      "url_key": "price",
+      "app_url_key": "price",
+      "sorting_strategy": "label",
+      "kind": "range",
+      "translation_strategy": "identity",
+      "label_translation_key": "catalog.article.price",
+      "position": 190,
+      "basic": true,
+      "values_config": {},
+      "facet_config": {
+        "exclude_additional_filter_fields": [
+          "prices",
+          "simples.search_price"
+        ]
+      }
+    },
+    {
+      "key": "sales",
+      "search_key": "is_discounted",
+      "simple_search_key": "simples.is_discounted",
+      "url_key": "sale",
+      "app_url_key": "sale",
+      "sorting_strategy": "label",
+      "kind": "single_value",
+      "translation_strategy": "boolean-zatra",
+      "label_translation_key": "catalog.article.sale",
+      "position": 200,
+      "basic": true,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "SALE",
+            "search_values":["true"],
+            "label_translation_key": "catalog.article.sale",
+            "visible": {
+              "state": "enabled",
+              "sales_channels": [
+                "gb", "ch"
+              ],
+              "conditions": [
+                {
+                  "experiment": {
+                    "source": "octopus",
+                    "identifier": "79eb22a0-88b1-4b58-b9b4-37c8c3995e3f",
+                    "variant": "no_omnibus_price_mode"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "facet_config": {
+        "exclude_additional_filter_fields": [
+          "is_discounted",
+          "simples.is_discounted"
+        ]
+      }
+    },
+    {
+      "key": "sales",
+      "search_key": "is_discounted",
+      "simple_search_key": "simples.is_discounted",
+      "url_key": "sale",
+      "app_url_key": "sale",
+      "sorting_strategy": "label",
+      "kind": "single_value",
+      "translation_strategy": "boolean-zatra",
+      "label_translation_key": "catalog.filter.deals",
+      "position": 200,
+      "basic": true,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "SALE",
+            "search_values":["true"],
+            "label_translation_key": "catalog.filter.deals",
+            "visible": {
+              "state": "enabled",
+              "sales_channels": [
+                "de", "nl", "fr", "it", "at", "pl", "be", "se", "fi", "dk", "es", "no", "cz", "ie", "pt", "si", "sk", "lt", "lv","ee", "hr", "hu", "ro"
+              ]
+            }
+          },
+          {
+            "value": "SALE",
+            "search_values":["true"],
+            "label_translation_key": "catalog.filter.deals",
+            "visible": {
+              "state": "enabled",
+              "sales_channels": [
+                "gb", "ch"
+              ],
+              "conditions": [
+                {
+                  "experiment": {
+                    "source": "octopus",
+                    "identifier": "79eb22a0-88b1-4b58-b9b4-37c8c3995e3f",
+                    "variant": "omnibus_two_price_mode_all"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "value": "SALE",
+            "search_values":["true"],
+            "label_translation_key": "catalog.filter.deals",
+            "visible": {
+              "state": "enabled",
+              "sales_channels": [
+                "gb",
+                "ch"
+              ],
+              "conditions": [
+                {
+                  "experiment": {
+                    "source": "octopus",
+                    "identifier": "79eb22a0-88b1-4b58-b9b4-37c8c3995e3f",
+                    "variant": "omnibus_all_price_modes"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "facet_config": {
+        "exclude_additional_filter_fields": [
+          "is_discounted",
+          "simples.is_discounted"
+        ]
+      }
+    },
+    {
+      "key": "subscription",
+      "search_key": "product_purposes_union.label",
+      "url_key": "subscription",
+      "sorting_strategy": "label",
+      "kind": "single_value",
+      "translation_strategy": "boolean-zatra",
+      "label_translation_key": "catalog.filter.subscription",
+      "position": 2120,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "true",
+            "search_values": ["subscription"],
+            "label_translation_key": "catalog.filter.subscription",
+            "visible": {
+              "state": "enabled",
+              "sales_channels": ["de"]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "key": "partner_ids",
+      "search_key": "pandora.sephora_merchant_ids",
+      "url_key": "partner",
+      "app_url_key": "partner_id",
+      "sorting_strategy": "label",
+      "kind": "values",
+      "translation_strategy": "merchant_translation",
+      "label_translation_key": "catalog.filter.partner_id",
+      "position": 201,
+      "values_config": {
+        "hidden_by_default": true,
+        "fixed_values": [
+          {
+            "value": "87ad7b9f-a03c-4d46-8216-740d8d18aaa3",
+            "metadata": {
+              "dependent_facet_keys": ["brands", "brand_families", "followed_brands", "your_brands"]
+            },
+            "visible": {
+              "state": "enabled",
+              "conditions": [
+                {
+                  "sales_channels": ["de"]
+                }
+              ]
+            }
+          },
+          {
+            "value": "117ee494-816a-4ed9-8769-92bf95f26392",
+            "metadata": {
+              "dependent_facet_keys": ["brands", "brand_families", "followed_brands", "your_brands"]
+            },
+            "visible": {
+              "state": "enabled",
+              "conditions": [
+                {
+                  "customer_hashes": ["e6dce8100a6d3a8bb3996c47bec53ea2001", "0a2dd8a2041a3ea3365be26a2febabc4001"]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "key": "free_delivery",
+      "search_key": "convenience.slow_delivery",
+      "simple_search_key": "simples.convenience.slow_delivery",
+      "url_key": "free_delivery",
+      "app_url_key": "free_delivery",
+      "sorting_strategy": "label",
+      "kind": "single_value",
+      "translation_strategy": "boolean-zatra",
+      "label_translation_key": "catalog.filter.freeDelivery",
+      "position": 200,
+      "basic": true,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "true",
+            "search_values": [
+              "false"
+            ],
+            "label_translation_key": "catalog.filter.freeDelivery",
+            "visible": {
+              "state": "enabled",
+              "sales_channels": [
+                "se", "it", "nl", "es", "fr", "gb", "ie", "be", "fi", "dk", "no", "cz", "pl", "at", "ch"
+              ]
+            }
+          }
+        ]
+      },
+      "facet_config": {
+        "exclude_additional_filter_fields": [
+          "convenience.slow_delivery",
+          "simples.convenience.slow_delivery"
+        ]
+      },
+      "visibility_rules": {
+        "plus_status_whitelist": [
+          "ELIGIBLE", "NOT_ELIGIBLE"
+        ]
+      }
+    },
+    {
+      "key": "seasons",
+      "search_key": "filter_season",
+      "url_key": "season_name",
+      "app_url_key": "season",
+      "sorting_strategy": "custom",
+      "kind": "values",
+      "translation_strategy": "basic-zatra",
+      "label_translation_key": "catalog.article.seasonName",
+      "position": 340,
+      "values_config": {
+        "label_translation_key_pattern": "catalog.article.season.{{value}}",
+        "fixed_values": [
+          {
+            "value": "SUMMER"
+          },
+          {
+            "value": "WINTER"
+          }
+        ]
+      }
+    },
+    {
+      "key": "bra_support",
+      "search_key": "tag",
+      "url_key": "bra_support",
+      "app_url_key": "bra_support",
+      "sorting_strategy": "custom",
+      "kind": "values",
+      "translation_strategy": "basic-zatra",
+      "label_translation_key": "catalog.filter.brasupport",
+      "position": 110,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "LOW",
+            "search_values": ["2210"],
+            "label_translation_key": "catalog.filter.brasupport.low"
+          },
+          {
+            "value": "MEDIUM",
+            "search_values": ["2211"],
+            "label_translation_key": "catalog.filter.brasupport.medium"
+          },
+          {
+            "value": "HIGH",
+            "search_values": ["2212"],
+            "label_translation_key": "catalog.filter.brasupport.high"
+          }
+        ]
+      }
+    },
+    {
+      "key": "shaft_heights",
+      "search_key": "pandora.shaft_heights",
+      "url_key": "shaft_height_range",
+      "app_url_key": "shaft_height_range",
+      "sorting_strategy": "custom",
+      "kind": "values",
+      "translation_strategy": "range-zatra",
+      "label_translation_key": "catalog.article.shaftHeight",
+      "position": 420,
+      "values_config": {
+        "search_value_transformation": {
+          "transformers": ["lowercase"]
+        },
+        "label_translation_key_pattern": "catalog.filter.range.filter.shaftheight",
+        "fixed_values": [
+          {
+            "value": "XS",
+            "ranges": {
+              "de": {
+                "to": 4
+              },
+              "gb": {
+                "to": 5
+              }
+            }
+          },
+          {
+            "value": "S",
+            "ranges": {
+              "de": {
+                "from": 5,
+                "to": 14
+              },
+              "gb": {
+                "from": 6,
+                "to": 9
+              }
+            }
+          },
+          {
+            "value": "M",
+            "ranges": {
+              "de": {
+                "from": 15,
+                "to": 24
+              },
+              "gb": {
+                "from": 10,
+                "to": 17
+              }
+            }
+          },
+          {
+            "value": "L",
+            "ranges": {
+              "de": {
+                "from": 25,
+                "to": 34
+              },
+              "gb": {
+                "from": 18
+              }
+            }
+          },
+          {
+            "value": "XL",
+            "ranges": {
+              "de": {
+                "from": 35,
+                "to": 44
+              }
+            }
+          },
+          {
+            "value": "XXL",
+            "ranges": {
+              "de": {
+                "from": 45
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "key": "shaft_widths",
+      "search_key": "filter_shaft_width",
+      "url_key": "shaft_width",
+      "app_url_key": "shaft_width",
+      "sorting_strategy": "custom",
+      "kind": "values",
+      "translation_strategy": "basic-zatra",
+      "position": 430,
+      "label_translation_key": "catalog.article.shaftWidth",
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "S",
+            "label_translation_key": "filter.attribute.range.filter.shaftwidth.S"
+          },
+          {
+            "value": "M",
+            "label_translation_key": "filter.attribute.range.filter.shaftwidth.M"
+          },
+          {
+            "value": "L",
+            "label_translation_key": "filter.attribute.range.filter.shaftwidth.L"
+          }
+        ]
+      }
+    },
+    {
+      "key": "shirt_collars",
+      "search_key": "pandora.collar_types",
+      "url_key": "shirt_collar",
+      "app_url_key": "shirt_collar",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.article.shirt_collar",
+      "position": 350,
+      "values_config": {
+        "search_value_transformation": {
+          "transformers": ["lowercase"]
+        },
+        "fixed_values": [
+          {
+            "value": "LAPEL_COLLAR",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_4297"
+          },
+          {
+            "value": "MANDARIN_COLLAR",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_4298"
+          },
+          {
+            "value": "HOOD",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_4299"
+          },
+          {
+            "value": "POLO_NECK",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_4300"
+          },
+          {
+            "value": "POLO_SHIRT",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_4301"
+          },
+          {
+            "value": "COWL_NECK",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_4302"
+          },
+          {
+            "value": "ROUND_NECK",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_4303"
+          },
+          {
+            "value": "SCARF_COLLAR",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_4304"
+          },
+          {
+            "value": "BOAT_NECK",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_4305"
+          },
+          {
+            "value": "V_NECK",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_4306"
+          },
+          {
+            "value": "BUTTON_DOWN",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_4332"
+          },
+          {
+            "value": "TURN_DOWN_COLLAR",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_4333"
+          },
+          {
+            "value": "HIGH_COLLAR",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_7297"
+          },
+          {
+            "value": "LINED_COLLAR",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_7298"
+          },
+          {
+            "value": "SHIRT_COLLAR",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_7299"
+          },
+          {
+            "value": "CUTAWAY_COLLAR",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_7300"
+          },
+          {
+            "value": "DOUBLE_COLLAR",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_7301"
+          },
+          {
+            "value": "PETER_PAN_COLLAR",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_7302"
+          },
+          {
+            "value": "KENT_COLLAR",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_7303"
+          },
+          {
+            "value": "CUP_SHAPED_COLLAR",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_7304"
+          },
+          {
+            "value": "CONTRAST_COLLAR",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_7305"
+          },
+          {
+            "value": "MAO_COLLAR",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_7306"
+          },
+          {
+            "value": "WING_COLLAR",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_7307"
+          },
+          {
+            "value": "TAB_COLLAR",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_7308"
+          },
+          {
+            "value": "VOLANT_COLLAR",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_7309"
+          },
+          {
+            "value": "SHAWL_COLLAR",
+            "label_translation_key": "shirt_collar_type,1.0.0,shirt_collar_type_7310"
+          },
+          {
+            "value": "ENVELOPE",
+            "label_translation_key": "neckline,1.0.0,neckline_7239"
+          },
+          {
+            "value": "LOW_V_NECK",
+            "label_translation_key": "neckline,1.0.0,neckline_7240"
+          },
+          {
+            "value": "CACHE_CEOUR",
+            "label_translation_key": "neckline,1.0.0,neckline_7241"
+          },
+          {
+            "value": "LOW_ROUND_NECK",
+            "label_translation_key": "neckline,1.0.0,neckline_7243"
+          },
+          {
+            "value": "BACKLESS",
+            "label_translation_key": "neckline,1.0.0,neckline_7244"
+          },
+          {
+            "value": "HENLEY",
+            "label_translation_key": "neckline,1.0.0,neckline_7245"
+          },
+          {
+            "value": "SQUARE_NECK",
+            "label_translation_key": "neckline,1.0.0,neckline_7247"
+          },
+          {
+            "value": "OFF_THE_SHOULDER",
+            "label_translation_key": "neckline,1.0.0,neckline_7249"
+          }
+        ]
+      }
+    },
+    {
+      "key": "shoe_widths",
+      "search_key": "filter_shoe_width",
+      "url_key": "shoe_width",
+      "app_url_key": "shoe_width",
+      "sorting_strategy": "custom",
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.article.shoeWidth",
+      "position": 410,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "NARROW",
+            "search_values": [
+              "SMALL",
+              "SMALL_F",
+              "small",
+              "small_f"
+            ],
+            "label_translation_key": "shoe_width,1.0.0,shoe_width_322"
+          },
+          {
+            "value": "NORMAL",
+            "search_values": [
+              "MEDIUM",
+              "MIDDLE_WIDTH",
+              "MINIMAL_GIVE",
+              "medium",
+              "middle_width",
+              "minimal_give"
+            ],
+            "label_translation_key": "shoe_width,1.0.0,shoe_width_321"
+          },
+          {
+            "value": "WIDE",
+            "search_values": [
+              "LARGE",
+              "COMFORTABLE_WIDTH",
+              "COMFORTABLE_GIVE",
+              "EXTRA_WIDE",
+              "VERY_WIDE",
+              "large",
+              "comfortable_width",
+              "comfortable_give",
+              "extra_wide",
+              "very_wide"
+            ],
+            "label_translation_key": "shoe_width,1.0.0,shoe_width_315"
+          }
+        ]
+      }
+    },
+    {
+      "key": "your_sizes",
+      "search_key": "your_sizes",
+      "url_key": "your_sizes",
+      "sorting_strategy": "label",
+      "kind": "single_value",
+      "translation_strategy": "identity",
+      "label_translation_key": "filter.description.yoursizes",
+      "position": 1,
+      "visible": {
+        "state": "enabled"
+      },
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "true"
+          }
+        ]
+      },
+      "onboarding": {
+        "kind": "size_class",
+        "multi_assortment_translation_key": "filter.description.yoursizes.unavailable"
+      },
+      "visibility_rules": {
+        "use_case_whitelist": [
+          "REGULAR-CATALOG",
+          "FULL-TEXT-SEARCH"
+        ]
+      }
+    },
+    {
+      "key": "sizes",
+      "search_key": "size_family",
+      "simple_search_key": "simples.size_family",
+      "url_key": "size",
+      "app_url_key": "size",
+      "sorting_strategy": "size",
+      "kind": "values",
+      "translation_strategy": "identity",
+      "label_translation_key": "catalog.article.size",
+      "position": 130,
+      "basic": true,
+      "values_config": {
+        "filter_value_transformation": {
+          "transformers": ["size_filter"]
+        }
+      },
+      "facet_config": {
+        "exclude_additional_filter_fields": [
+          "size_family",
+          "simples.size_family"
+        ]
+      }
+    },
+    {
+      "key": "skus",
+      "search_key": "sku",
+      "url_key": "sku",
+      "app_url_key": "sku",
+      "sorting_strategy": "label",
+      "kind": "values",
+      "translation_strategy": "identity",
+      "label_translation_key": "",
+      "position": 2060,
+      "visible": {
+        "state": "disabled"
+      },
+      "values_config": {}
+    },
+    {
+      "key": "sports",
+      "search_key": "sport_type_key",
+      "url_key": "sport_type",
+      "app_url_key": "sports",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "multi-source",
+      "translation_config": {
+        "multi_source": {
+          "strategies": [
+            "basic-zatra",
+            "master-attribute"
+          ]
+        }
+      },
+      "label_translation_key": "catalog.article.sportsFamilyMKey",
+      "position": 180,
+      "values_config": {
+        "label_translation_key_pattern": "sports.family.{{value}}",
+        "fixed_values": [
+          {
+            "value": "OUTDOOR",
+            "search_values": [
+              "ao.sport_type.4589",
+              "ao.sport_type.4586",
+              "ao.sport_type.3646",
+              "ao.sport_type.4587"
+            ]
+          },
+          {
+            "value": "RUNNING",
+            "search_values": [
+              "ao.sport_type.3648"
+            ]
+          },
+          {
+            "value": "TRAINING",
+            "search_values": [
+              "ao.sport_type.3647",
+              "ao.sport_type.4594"
+            ]
+          },
+          {
+            "value": "FOOTBALL",
+            "search_values": [
+              "ao.sport_type.3640"
+            ]
+          },
+          {
+            "value": "HANDBALL",
+            "search_values": [
+              "ao.sport_type.3644"
+            ]
+          },
+          {
+            "value": "BASKETBALL",
+            "search_values": [
+              "ao.sport_type.3649"
+            ]
+          },
+          {
+            "value": "PADEL",
+            "search_values": [
+              "ao.sport_type.8235"
+            ],
+            "label_translation_key": "sport_type,1.0.0,sport_type_8235"
+          },
+          {
+            "value": "VOLLEYBALL",
+            "search_values": [
+              "ao.sport_type.3645"
+            ]
+          },
+          {
+            "value": "GOLF",
+            "search_values": [
+              "ao.sport_type.3643"
+            ]
+          },
+          {
+            "value": "TENNIS",
+            "search_values": [
+              "ao.sport_type.3650"
+            ]
+          },
+          {
+            "value": "BEACH",
+            "search_values": [
+              "ao.sport_type.3641",
+              "ao.sport_type.6387",
+              "ao.sport_type.6386",
+              "ao.sport_type.6390",
+              "ao.sport_type.4592"
+            ]
+          },
+          {
+            "value": "CYCLING",
+            "label_translation_key": "sports.family.bike",
+            "search_values": [
+              "ao.sport_type.4596",
+              "ao.sport_type.4591"
+            ]
+          },
+          {
+            "value": "SWIMMING",
+            "search_values": [
+              "ao.sport_type.4584"
+            ]
+          },
+          {
+            "value": "YOGA",
+            "search_values": [
+              "ao.sport_type.4594"
+            ]
+          },
+          {
+            "value": "american_sports",
+            "search_values": [
+              "ao.sport_type.8233",
+              "ao.sport_type.8232"
+            ],
+            "url_translation_key": "catalog.filter.sport.american_sports.url"
+          },
+          {
+            "value": "SKI_SNOW",
+            "label_translation_key": "sports.family.ski",
+            "search_values": [
+              "ao.sport_type.4590"
+            ],
+            "visible": {
+              "state": "disabled"
+            }
+          },
+          {
+            "value": "SNOWBOARD",
+            "search_values": [
+              "ao.sport_type.3642"
+            ],
+            "visible": {
+              "state": "disabled"
+            }
+          },
+          {
+            "value": "winter_sports",
+            "search_values": [
+              "ao.sport_type.4590",
+              "ao.sport_type.3642"
+            ],
+            "url_translation_key": "catalog.filter.sport.winter_sports.url"
+          },
+          {
+            "value": "DANCING",
+            "search_values": [
+              "ao.sport_type.7073"
+            ]
+          },
+          {
+            "value": "TRAILRUNNING",
+            "search_values": [
+              "ao.sport_type.8234"
+            ] ,
+            "label_translation_key": "sport_type,1.0.0,sport_type_8234"
+          }
+        ]
+      }
+    },
+    {
+      "key": "jewelry_materials",
+      "search_key": "pandora.jewelry_materials",
+      "url_key": "jewelry_material",
+      "app_url_key": "jewelry_material",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "filter.label.jewelry.material",
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "gold",
+            "label_translation_key": "material_jewelry_two,1.0.0,material_jewelry_two_8113"
+          },
+          {
+            "value": "sterling_silver",
+            "label_translation_key": "material_jewelry_two,1.0.0,material_jewelry_two_8097"
+          },
+          {
+            "value": "white_gold",
+            "label_translation_key": "material_jewelry_two,1.0.0,material_jewelry_two_8123"
+          },
+          {
+            "value": "rose_gold",
+            "label_translation_key": "material_jewelry_two,1.0.0,material_jewelry_two_8122"
+          },
+          {
+            "value": "diamond",
+            "label_translation_key": "stone_type,1.0.0,stone_type_8024"
+          },
+          {
+            "value": "gold_plated",
+            "label_translation_key": "finish,1.0.0,finish_8068"
+          },
+          {
+            "value": "rose_gold_plated",
+            "label_translation_key": "finish,1.0.0,finish_8066"
+          }
+        ]
+      },
+      "position": 221
+    },
+    {
+      "key": "upper_materials",
+      "search_key": "pandora.upper_materials",
+      "url_key": "upper_material",
+      "app_url_key": "upper_material",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "multi-source",
+      "translation_config": {
+        "multi_source": {
+          "strategies": [
+            "basic-zatra",
+            "fashion-tags"
+          ]
+        },
+        "tag_config": {
+          "skip_value_uri_prefix": true
+        }
+      },
+      "label_translation_key": "catalog.article.upperMaterialFamily",
+      "position": 220,
+      "values_config": {
+        "label_translation_key_pattern": "uppermaterial.family.{{value}}",
+        "url_translation_key_pattern": "uppermaterial.family.{{value}}.urlKey",
+        "fixed_values": [
+          {
+            "value": "batiste"
+          },
+          {
+            "value": "caoutchouc"
+          },
+          {
+            "value": "cashmere"
+          },
+          {
+            "value": "cotton"
+          },
+          {
+            "value": "damask"
+          },
+          {
+            "value": "down"
+          },
+          {
+            "value": "feathers"
+          },
+          {
+            "value": "felt"
+          },
+          {
+            "value": "flanelette"
+          },
+          {
+            "value": "flannel"
+          },
+          {
+            "value": "fleece"
+          },
+          {
+            "value": "gauze"
+          },
+          {
+            "value": "imitation_leather"
+          },
+          {
+            "value": "jacquard"
+          },
+          {
+            "value": "jersey"
+          },
+          {
+            "value": "leather"
+          },
+          {
+            "value": "linen"
+          },
+          {
+            "value": "linon"
+          },
+          {
+            "value": "mesh"
+          },
+          {
+            "value": "microfiber"
+          },
+          {
+            "value": "other"
+          },
+          {
+            "value": "percale"
+          },
+          {
+            "value": "polyester"
+          },
+          {
+            "value": "renforce"
+          },
+          {
+            "value": "satin"
+          },
+          {
+            "value": "seersucker"
+          },
+          {
+            "value": "silk"
+          },
+          {
+            "value": "synthetic"
+          },
+          {
+            "value": "textile"
+          },
+          {
+            "value": "towelling"
+          },
+          {
+            "value": "varnish"
+          },
+          {
+            "value": "velours"
+          },
+          {
+            "value": "viscose"
+          },
+          {
+            "value": "wool"
+          },
+          {
+            "value": "cord"
+          },
+          {
+            "value": "denim"
+          },
+          {
+            "value": "rib"
+          },
+          {
+            "value": "braided"
+          },
+          {
+            "value": "crocheted"
+          },
+          {
+            "value": "hardshell"
+          },
+          {
+            "value": "softshell"
+          },
+          {
+            "value": "lace"
+          },
+          {
+            "value": "sweat"
+          }
+        ]
+      },
+      "post_processors": [
+        "fkg_intended_gender"
+      ]
+    },
+    {
+      "key": "trouser_rises",
+      "search_key": "filter_trouser_rise",
+      "url_key": "trouser_rise",
+      "app_url_key": "trouser_rise",
+      "sorting_strategy": "custom",
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.article.trouser_rise",
+      "position": 360,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "LOW",
+            "label_translation_key": "trouser_rise,1.0.0,trouser_rise_154"
+          },
+          {
+            "value": "MEDIUM",
+            "label_translation_key": "trouser_rise,1.0.0,trouser_rise_155"
+          },
+          {
+            "value": "HIGH",
+            "label_translation_key": "trouser_rise,1.0.0,trouser_rise_156"
+          }
+        ]
+      }
+    },
+    {
+      "key": "volumes",
+      "search_key": "filter_volume",
+      "url_key": "volume",
+      "app_url_key": "volume",
+      "sorting_strategy": "custom",
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.article.volume",
+      "position": 280,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "SMALLEST",
+            "label_translation_key": "sport_volume,1.0.0,sport_volume_4858"
+          },
+          {
+            "value": "SMALL",
+            "label_translation_key": "sport_volume,1.0.0,sport_volume_4855"
+          },
+          {
+            "value": "MEDIUM",
+            "label_translation_key": "sport_volume,1.0.0,sport_volume_4859"
+          },
+          {
+            "value": "LARGE",
+            "label_translation_key": "sport_volume,1.0.0,sport_volume_4856"
+          },
+          {
+            "value": "LARGEST",
+            "label_translation_key": "sport_volume,1.0.0,sport_volume_4857"
+          }
+        ]
+      }
+    },
+    {
+      "key": "lengths",
+      "search_key": "pandora.lengths",
+      "simple_search_key": "simples.lengths",
+      "url_key": "length",
+      "app_url_key": "length",
+      "sorting_strategy": "custom",
+      "kind": "values",
+      "translation_strategy": "multi-source",
+      "translation_config": {
+        "multi_source": {
+          "strategies": [
+            "basic-zatra",
+            "number_translation"
+          ]
+        }
+      },
+      "label_translation_key": "catalog.article.length",
+      "position": 300,
+      "basic": true,
+      "values_config": {
+        "label_translation_key_pattern": "catalog.filter.length.{{value}}",
+        "url_translation_key_pattern": "catalog.filter.length.{{value}}",
+        "hidden_by_default": false,
+        "fixed_values": [
+          {
+            "value": "normal"
+          },
+          {
+            "value": "extra_short"
+          },
+          {
+            "value": "short"
+          },
+          {
+            "value": "thigh_length"
+          },
+          {
+            "value": "knee_length"
+          },
+          {
+            "value": "calf_length"
+          },
+          {
+            "value": "3_4_length"
+          },
+          {
+            "value": "7_8_length"
+          },
+          {
+            "value": "ankle_length"
+          },
+          {
+            "value": "long"
+          },
+          {
+            "value": "extra_long"
+          }
+        ]
+      },
+      "facet_config": {
+        "exclude_additional_filter_fields": [
+          "pandora.lengths",
+          "simples.lengths"
+        ],
+        "unlensing_enabled": true
+      }
+    },
+    {
+      "key": "densities",
+      "search_key": "filter_den",
+      "url_key": "den",
+      "app_url_key": "den",
+      "sorting_strategy": "custom",
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catelog.filter.den",
+      "position": 290,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "DEN_15",
+            "label_translation_key": "den,1.0.0,den_6220"
+          },
+          {
+            "value": "DEN_20",
+            "label_translation_key": "den,1.0.0,den_6215"
+          },
+          {
+            "value": "DEN_40",
+            "label_translation_key": "den,1.0.0,den_6219"
+          },
+          {
+            "value": "DEN_60",
+            "label_translation_key": "den,1.0.0,den_6217"
+          },
+          {
+            "value": "DEN_80",
+            "label_translation_key": "den,1.0.0,den_6218"
+          },
+          {
+            "value": "DEN_100",
+            "label_translation_key": "den,1.0.0,den_6216"
+          },
+          {
+            "value": "DEN_200",
+            "label_translation_key": "den,1.0.0,den_7289"
+          },
+          {
+            "value": "DEN_120",
+            "label_translation_key": "den,1.0.0,den_7290"
+          },
+          {
+            "value": "DEN_12",
+            "label_translation_key": "den,1.0.0,den_7291"
+          },
+          {
+            "value": "DEN_50",
+            "label_translation_key": "den,1.0.0,den_7292"
+          }
+        ]
+      }
+    },
+    {
+      "key": "shoe_toecaps",
+      "search_key": "filter_shoe_toecap",
+      "url_key": "shoe_toecap",
+      "app_url_key": "shoe_toecap",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.filter.shoeToecap",
+      "position": 390,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "ROUND",
+            "label_translation_key": "shoe_toecap,1.0.0,shoe_toecap_3565"
+          },
+          {
+            "value": "POINTED",
+            "label_translation_key": "shoe_toecap,1.0.0,shoe_toecap_3566"
+          },
+          {
+            "value": "OPEN",
+            "label_translation_key": "shoe_toecap,1.0.0,shoe_toecap_3567"
+          },
+          {
+            "value": "SQUARE",
+            "label_translation_key": "shoe_toecap,1.0.0,shoe_toecap_3568"
+          }
+        ]
+      }
+    },
+    {
+      "key": "fillings",
+      "search_key": "filter_filling",
+      "url_key": "filling",
+      "app_url_key": "filling",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "basic-zatra",
+      "label_translation_key": "catalog.article.filling",
+      "position": 440,
+      "values_config": {
+        "label_translation_key_pattern": "catalog.filter.futter.{{value}}",
+        "fixed_values": [
+          {
+            "value": "ANGORA"
+          },
+          {
+            "value": "BAUMWOLLE"
+          },
+          {
+            "value": "DAUNEN"
+          },
+          {
+            "value": "FELL"
+          },
+          {
+            "value": "FLEECE"
+          },
+          {
+            "value": "FROTTEE"
+          },
+          {
+            "value": "KASCHMIR"
+          },
+          {
+            "value": "LAMMFELL"
+          },
+          {
+            "value": "LEDER"
+          },
+          {
+            "value": "LEDERIMITAT"
+          },
+          {
+            "value": "MERINOWOLLE"
+          },
+          {
+            "value": "MICROFASER"
+          },
+          {
+            "value": "MOHAIR"
+          },
+          {
+            "value": "SATIN"
+          },
+          {
+            "value": "SCHURWOLLE"
+          },
+          {
+            "value": "SEIDE"
+          },
+          {
+            "value": "SONSTIGE"
+          },
+          {
+            "value": "TEXTIL"
+          },
+          {
+            "value": "WARM"
+          },
+          {
+            "value": "WOLLE"
+          }
+        ]
+      }
+    },
+    {
+      "key": "shoe_fasteners",
+      "search_key": "fastening_key",
+      "url_key": "shoe_fastener",
+      "app_url_key": "shoe_fastener",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.filter.shoeFastener",
+      "position": 400,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "ZIP",
+            "search_values": [
+              "ao.fastening.4318"
+            ],
+            "label_translation_key": "fastening,1.0.0,fastening_4318"
+          },
+          {
+            "value": "LACES",
+            "search_values": [
+              "ao.fastening.4319"
+            ],
+            "label_translation_key": "fastening,1.0.0,fastening_4319"
+          },
+          {
+            "value": "STRAPS",
+            "search_values": [
+              "ao.fastening.8406"
+            ],
+            "label_translation_key": "fastening,1.0.0,fastening_8406"
+          },
+          {
+            "value": "SLIP_ON",
+            "search_values": [
+              "ao.fastening.8407"
+            ],
+            "label_translation_key": "fastening,1.0.0,fastening_8407"
+          },
+          {
+            "value": "HOOK_AND_LOOP",
+            "search_values": [
+              "ao.fastening.8402"
+            ],
+            "label_translation_key": "fastening,1.0.0,fastening_8402"
+          },
+          {
+            "value": "BUCKLE_BOW",
+            "search_values": [
+              "ao.fastening.8408"
+            ],
+            "label_translation_key": "fastening,1.0.0,fastening_8408"
+          },
+          {
+            "value": "ELASTIC_LACES",
+            "search_values": [
+              "ao.fastening.8434"
+            ],
+            "label_translation_key": "fastening,1.0.0,fastening_8434"
+          }
+        ]
+      }
+    },
+    {
+      "key": "discounts",
+      "search_key": "discount_rates",
+      "simple_search_key": "simples.discount_rate",
+      "url_key": "discount",
+      "app_url_key": "discount",
+      "sorting_strategy": "custom",
+      "kind": "values",
+      "translation_strategy": "basic-zatra",
+      "label_translation_key": "catalog.filter.discount",
+      "position": 210,
+      "facet_config": {
+        "group_terms_toggle": true,
+        "exclude_additional_filter_fields": [
+          "discount_rates",
+          "simples.discount_rate"
+        ]
+      },
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "DISCOUNT0",
+            "label_translation_key": "ao.discount_rate.7311.key",
+            "url_translation_key": "ao.discount_rate.7311.urlKey",
+            "ranges": {
+              "global": {
+                "from": 0,
+                "to": 20
+              }
+            }
+          },
+          {
+            "value": "DISCOUNT1",
+            "label_translation_key": "ao.discount_rate.7312.key",
+            "url_translation_key": "ao.discount_rate.7312.urlKey",
+            "ranges": {
+              "global": {
+                "from": 20,
+                "to": 30
+              }
+            }
+          },
+          {
+            "value": "DISCOUNT2",
+            "label_translation_key": "ao.discount_rate.7313.key",
+            "url_translation_key": "ao.discount_rate.7313.urlKey",
+            "ranges": {
+              "global": {
+                "from": 30,
+                "to": 40
+              }
+            }
+          },
+          {
+            "value": "DISCOUNT3",
+            "label_translation_key": "ao.discount_rate.7314.key",
+            "url_translation_key": "ao.discount_rate.7314.urlKey",
+            "ranges": {
+              "global": {
+                "from": 40,
+                "to": 50
+              }
+            }
+          },
+          {
+            "value": "DISCOUNT4",
+            "label_translation_key": "ao.discount_rate.7315.key",
+            "url_translation_key": "ao.discount_rate.7315.urlKey",
+            "ranges": {
+              "global": {
+                "from": 50,
+                "to": 60
+              }
+            }
+          },
+          {
+            "value": "DISCOUNT5",
+            "label_translation_key": "ao.discount_rate.7316.key",
+            "url_translation_key": "ao.discount_rate.7316.urlKey",
+            "ranges": {
+              "global": {
+                "from": 60,
+                "to": 100
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "key": "activation_dates",
+      "search_key": "filter_activation_date",
+      "url_key": "activation_date",
+      "app_url_key": "activation_date",
+      "sorting_strategy": "custom",
+      "kind": "values",
+      "translation_strategy": "basic-zatra",
+      "label_translation_key": "catalog.filter.activationdate",
+      "position": 460,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "THIS_WEEK",
+            "label_translation_key": "catalog.filter.activationdate.thisweek",
+            "url_translation_key": "catalog.filter.activationdate.thisweek.urlKey"
+          },
+          {
+            "value": "LAST_WEEK",
+            "label_translation_key": "catalog.filter.activationdate.lastweek",
+            "url_translation_key": "catalog.filter.activationdate.lastweek.urlKey"
+          },
+          {
+            "value": "LAST_MONTH",
+            "label_translation_key": "catalog.filter.activationdate.lastmonth",
+            "url_translation_key": "catalog.filter.activationdate.lastmonth.urlKey"
+          }
+        ]
+      }
+    },
+    {
+      "key": "zalando_plus",
+      "search_key": "convenience.show_plus_flag",
+      "url_key": "zalando_plus",
+      "app_url_key": "zalando_plus",
+      "sorting_strategy": "label",
+      "kind": "single_value",
+      "translation_strategy": "boolean-zatra",
+      "label_translation_key": "product.flag.delivery.plus",
+      "position": 1500,
+      "media_key": "plus_delivery_flag",
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "true",
+            "label_translation_key": "product.flag.delivery.plus",
+            "media_key": "plus_delivery_flag"
+          }
+        ]
+      },
+      "visible": {
+        "state": "enabled",
+        "sales_channels": [
+          "de",
+          "fr",
+          "nl",
+          "it"
+        ]
+      },
+      "visibility_rules": {
+        "plus_status_whitelist": [
+          "ELIGIBLE", "MEMBER"
+        ]
+      }
+    },
+    {
+      "key": "shipped_by_zalando",
+      "search_key": "all_simples_from_warehouse",
+      "url_key": "shipped_by_zalando",
+      "sorting_strategy": "label",
+      "kind": "single_value",
+      "translation_strategy": "boolean-zatra",
+      "label_translation_key": "catalog.filter.shippedbyZalando",
+      "position": 1550,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "true",
+            "url_translation_key": "boolean.true",
+            "label_translation_key": "catalog.filter.shippedbyZalando"
+          }
+        ]
+      },
+      "visible": {
+        "state": "enabled",
+        "sales_channels": [
+          "de",
+          "nl",
+          "fr",
+          "gb",
+          "at",
+          "ch",
+          "pl",
+          "be",
+          "se",
+          "fi",
+          "dk",
+          "es",
+          "no",
+          "cz",
+          "it"
+        ]
+      }
+    },
+    {
+      "key": "connected_retail",
+      "search_key": "connected_retail_store_share",
+      "url_key": "support_stores",
+      "app_url_key": "connected_retail",
+      "sorting_strategy": "label",
+      "kind": "single_value",
+      "translation_strategy": "boolean-zatra",
+      "label_translation_key": "catalog.filter.connectedRetail",
+      "position": 1560,
+      "basic": true,
+      "facet_config": {
+        "threshold_range_toggle": true
+      },
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "true",
+            "url_translation_key": "boolean.true",
+            "label_translation_key": "catalog.filter.connectedRetail",
+            "ranges": {
+              "global": {
+                "from": 100,
+                "to": 100
+              }
+            }
+          }
+        ]
+      },
+      "visible": {
+        "state": "enabled",
+        "sales_channels": [
+          "de", "nl", "dk", "se", "pl", "no", "at", "es", "fr", "fi", "ch", "it", "be"
+        ]
+      },
+      "visibility_rules": {
+        "use_case_whitelist": [
+          "REGULAR-CATALOG",
+          "FULL-TEXT-SEARCH"
+        ]
+      }
+    },
+    {
+      "key": "glasses_shapes",
+      "search_key": "glasses_form_key",
+      "url_key": "glasses_shape",
+      "app_url_key": "glasses_shape",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.filter.glassesShape",
+      "position": 320,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "BUTTERFLY",
+            "search_values": [
+              "ao.glasses_form.6987"
+            ],
+            "label_translation_key": "glasses_form,1.0.0,glasses_form_6987"
+          },
+          {
+            "value": "WAYFARER",
+            "search_values": [
+              "ao.glasses_form.6984"
+            ],
+            "label_translation_key": "glasses_form,1.0.0,glasses_form_6984"
+          },
+          {
+            "value": "OVAL",
+            "search_values": [
+              "ao.glasses_form.6986"
+            ],
+            "label_translation_key": "glasses_form,1.0.0,glasses_form_6986"
+          },
+          {
+            "value": "AVIATOR",
+            "search_values": [
+              "ao.glasses_form.6988"
+            ],
+            "label_translation_key": "glasses_form,1.0.0,glasses_form_6988"
+          },
+          {
+            "value": "SQUARE",
+            "search_values": [
+              "ao.glasses_form.6985"
+            ],
+            "label_translation_key": "glasses_form,1.0.0,glasses_form_6985"
+          },
+          {
+            "value": "WRAP_AROUND",
+            "search_values": [
+              "ao.glasses_form.6982"
+            ],
+            "label_translation_key": "glasses_form,1.0.0,glasses_form_6982"
+          },
+          {
+            "value": "CAT_EYE",
+            "search_values": [
+              "ao.glasses_form.7867"
+            ],
+            "label_translation_key": "glasses_form,1.0.0,glasses_form_7867"
+          },
+          {
+            "value": "ROUND",
+            "search_values": [
+              "ao.glasses_form.7866"
+            ],
+            "label_translation_key": "glasses_form,1.0.0,glasses_form_7866"
+          }
+        ]
+      }
+    },
+    {
+      "key": "campaigns",
+      "search_key": "filter_campaign",
+      "url_key": "camp",
+      "app_url_key": "camp",
+      "sorting_strategy": "label",
+      "kind": "values",
+      "translation_strategy": "campaign",
+      "label_translation_key": "catalog.filters.campaign.label",
+      "position": 470,
+      "basic": true,
+      "values_config": {
+        "hidden_by_default": false
+      }
+    },
+    {
+      "key": "sleeves",
+      "search_key": "sleeve_length_option_key",
+      "url_key": "sleeves",
+      "app_url_key": "sleeves",
+      "sorting_strategy": "custom",
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.filter.sleeve",
+      "position": 310,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "STRAPLESS",
+            "search_values": [
+              "ao.sleeve_length_option.4265"
+            ],
+            "label_translation_key": "sleeve_length_option,1.0.0,sleeve_length_option_4265"
+          },
+          {
+            "value": "SLEEVELESS",
+            "search_values": [
+              "ao.sleeve_length_option.4267"
+            ],
+            "label_translation_key": "sleeve_length_option,1.0.0,sleeve_length_option_4267"
+          },
+          {
+            "value": "SPAGHETTI_STRAPS",
+            "search_values": [
+              "ao.sleeve_length_option.4268"
+            ],
+            "label_translation_key": "sleeve_length_option,1.0.0,sleeve_length_option_4268"
+          },
+          {
+            "value": "EXTRA_SHORT",
+            "search_values": [
+              "ao.sleeve_length_option.7266"
+            ],
+            "label_translation_key": "sleeve_length_option,1.0.0,sleeve_length_option_7266"
+          },
+          {
+            "value": "SHORT",
+            "search_values": [
+              "ao.sleeve_length_option.4271"
+            ],
+            "label_translation_key": "sleeve_length_option,1.0.0,sleeve_length_option_4271"
+          },
+          {
+            "value": "ELBOW_LENGTH",
+            "search_values": [
+              "ao.sleeve_length_option.4269"
+            ],
+            "label_translation_key": "sleeve_length_option,1.0.0,sleeve_length_option_4269"
+          },
+          {
+            "value": "3_4_LENGTH",
+            "search_values": [
+              "ao.sleeve_length_option.4266"
+            ],
+            "label_translation_key": "sleeve_length_option,1.0.0,sleeve_length_option_4266"
+          },
+          {
+            "value": "LONG",
+            "search_values": [
+              "ao.sleeve_length_option.4270"
+            ],
+            "label_translation_key": "sleeve_length_option,1.0.0,sleeve_length_option_4270"
+          },
+          {
+            "value": "EXTRA_LONG",
+            "search_values": [
+              "ao.sleeve_length_option.7265"
+            ],
+            "label_translation_key": "sleeve_length_option,1.0.0,sleeve_length_option_7265"
+          }
+        ]
+      }
+    },
+    {
+      "key": "sustainability_benefits",
+      "search_key": "sustainability_benefits",
+      "select_all_enabled": true,
+      "url_key": "sustainability_benefit",
+      "app_url_key": "sustainability_benefit",
+      "sorting_strategy": "label",
+      "kind": "values",
+      "translation_strategy": "fashion-tags",
+      "label_translation_key": "filter.sustainable.label",
+      "translation_config": {
+        "tag_config": {
+          "skip_value_uri_prefix": true
+        }
+      },
+      "position": 174,
+      "post_processors": [
+        "fkg_intended_gender"
+      ],
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "organic_materials",
+            "media_key": "organic_materials"
+          },
+          {
+            "value": "organic_ingredients",
+            "media_key": "organic_ingredients"
+          },
+          {
+            "value": "recycled_materials",
+            "media_key": "recycled_materials"
+          },
+          {
+            "value": "recycled_packaging",
+            "media_key": "recycled_packaging"
+          },
+          {
+            "value": "improved_production",
+            "media_key": "improved_production"
+          },
+          {
+            "value": "responsibly_sourced_materials",
+            "media_key": "responsibly_sourced_materials"
+          },
+          {
+            "value": "responsibly_sourced_ingredients",
+            "media_key": "responsibly_sourced_ingredients"
+          },
+          {
+            "value": "innovative_materials",
+            "media_key": "innovative_materials"
+          },
+          {
+            "value": "refillable",
+            "media_key": "refillable"
+          },
+          {
+            "value": "cruelty_free",
+            "media_key": "cruelty_free"
+          },
+          {
+            "value": "natural_ingredients",
+            "media_key": "natural_ingredients"
+          },
+          {
+            "value": "designed_for_circularity",
+            "media_key": "designed_for_circularity"
+          }
+        ]
+      }
+    },
+    {
+      "key": "benefits",
+      "search_key": "filter_benefits",
+      "url_key": "benefits",
+      "app_url_key": "benefits",
+      "sorting_strategy": "label",
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.filter.benefits",
+      "position": 1000,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "LENGTHENING",
+            "label_translation_key": "benefits,1,benefits_7879"
+          },
+          {
+            "value": "STRAIGHTENING",
+            "label_translation_key": "benefits,1,benefits_7887"
+          },
+          {
+            "value": "STRENGTHENING",
+            "label_translation_key": "benefits,1,benefits_7973"
+          },
+          {
+            "value": "HARDENING",
+            "label_translation_key": "benefits,1,benefits_7882"
+          },
+          {
+            "value": "LONG_LASTING",
+            "label_translation_key": "benefits,1,benefits_7876"
+          },
+          {
+            "value": "WATERPROOF",
+            "label_translation_key": "benefits,1,benefits_7878"
+          },
+          {
+            "value": "COLOUR_PROTECTION",
+            "label_translation_key": "benefits,1,benefits_7884"
+          },
+          {
+            "value": "HEAT_PROTECTION",
+            "label_translation_key": "benefits,1,benefits_7885"
+          },
+          {
+            "value": "SOFTENING",
+            "label_translation_key": "benefits,1,benefits_7888"
+          },
+          {
+            "value": "MOISTURISING",
+            "label_translation_key": "benefits,1,benefits_7875"
+          },
+          {
+            "value": "PLUMPING",
+            "label_translation_key": "benefits,1,benefits_7877"
+          },
+          {
+            "value": "VOLUMISING",
+            "label_translation_key": "benefits,1,benefits_7881"
+          },
+          {
+            "value": "REPAIRING",
+            "label_translation_key": "benefits,1,benefits_7883"
+          },
+          {
+            "value": "SHINE",
+            "label_translation_key": "benefits,1,benefits_7886"
+          },
+          {
+            "value": "CURL_ENHANCING",
+            "label_translation_key": "benefits,1,benefits_7880"
+          }
+        ]
+      }
+    },
+    {
+      "key": "concerns",
+      "search_key": "filter_concerns",
+      "url_key": "concerns",
+      "app_url_key": "concerns",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.filter.concerns",
+      "position": 1010,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "ANTI-AGING",
+            "label_translation_key": "concerns,1,concerns_7891"
+          },
+          {
+            "value": "DRYNESS",
+            "label_translation_key": "concerns,1,concerns_7892"
+          },
+          {
+            "value": "DULLNESS",
+            "label_translation_key": "concerns,1,concerns_7893"
+          },
+          {
+            "value": "UNEVEN_TEXTURE",
+            "label_translation_key": "concerns,1,concerns_7894"
+          },
+          {
+            "value": "FINE_LINES",
+            "label_translation_key": "concerns,1,concerns_7895"
+          },
+          {
+            "value": "LOSS_OF_FIRMNESS",
+            "label_translation_key": "concerns,1,concerns_7896"
+          },
+          {
+            "value": "OILINESS",
+            "label_translation_key": "concerns,1,concerns_7897"
+          },
+          {
+            "value": "UNEVEN_SKIN_TONE",
+            "label_translation_key": "concerns,1,concerns_7898"
+          },
+          {
+            "value": "DANDRUFF",
+            "label_translation_key": "concerns,1,concerns_7900"
+          },
+          {
+            "value": "FRIZZ",
+            "label_translation_key": "concerns,1,concerns_7901"
+          },
+          {
+            "value": "BLACKHEADS",
+            "label_translation_key": "concerns,1,concerns_7902"
+          },
+          {
+            "value": "DARK_CIRCLES",
+            "label_translation_key": "concerns,1,concerns_7903"
+          },
+          {
+            "value": "DARK_SPOTS",
+            "label_translation_key": "concerns,1,concerns_7904"
+          },
+          {
+            "value": "PUFFINESS",
+            "label_translation_key": "concerns,1,concerns_7905"
+          },
+          {
+            "value": "REDNESS",
+            "label_translation_key": "concerns,1,concerns_7906"
+          },
+          {
+            "value": "VISIBLE_PORES",
+            "label_translation_key": "concerns,1,concerns_7907"
+          },
+          {
+            "value": "SENSITIVE_SKIN",
+            "label_translation_key": "concerns,1,concerns_7908"
+          },
+          {
+            "value": "ACNE",
+            "label_translation_key": "concerns,1,concerns_7909"
+          },
+          {
+            "value": "DAMAGED_HAIR",
+            "label_translation_key": "concerns,1,concerns_7910"
+          },
+          {
+            "value": "FINE_HAIR",
+            "label_translation_key": "concerns,1,concerns_7911"
+          },
+          {
+            "value": "THINNING",
+            "label_translation_key": "concerns,1,concerns_7912"
+          },
+          {
+            "value": "COMBINATION_SKIN",
+            "label_translation_key": "skin_type,1.0.0,skin_type_342"
+          },
+          {
+            "value": "NORMAL_SKIN",
+            "label_translation_key": "skin_type,1.0.0,skin_type_346"
+          }
+        ]
+      }
+    },
+    {
+      "key": "skin_type",
+      "search_key": "filter_skin_type",
+      "url_key": "skin_type",
+      "app_url_key": "skin_type",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.filter.skin_type",
+      "position": 1060,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "DRY_SKIN",
+            "label_translation_key": "skin_type,1.0.0,skin_type_340"
+          },
+          {
+            "value": "SENSITIVE_SKIN",
+            "label_translation_key": "skin_type,1.0.0,skin_type_341"
+          },
+          {
+            "value": "COMBINATION_SKIN",
+            "label_translation_key": "skin_type,1.0.0,skin_type_342"
+          },
+          {
+            "value": "OILY_SKIN",
+            "label_translation_key": "skin_type,1.0.0,skin_type_345"
+          },
+          {
+            "value": "NORMAL_SKIN",
+            "label_translation_key": "skin_type,1.0.0,skin_type_346"
+          },
+          {
+            "value": "ALL_SKIN_TYPES",
+            "label_translation_key": "skin_type,1.0.0,skin_type_348"
+          }
+        ]
+      }
+    },
+    {
+      "key": "finish",
+      "search_key": "filter_finish",
+      "url_key": "finish",
+      "app_url_key": "finish",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.filter.finish",
+      "position": 155,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "MATTE",
+            "label_translation_key": "finish,1,finish_7942"
+          },
+          {
+            "value": "NATURAL",
+            "label_translation_key": "finish,1,finish_7944"
+          },
+          {
+            "value": "CREME",
+            "label_translation_key": "finish,1,finish_7948"
+          },
+          {
+            "value": "SATIN",
+            "label_translation_key": "finish,1,finish_7946"
+          },
+          {
+            "value": "RADIANT",
+            "label_translation_key": "finish,1,finish_7945"
+          },
+          {
+            "value": "GEL",
+            "label_translation_key": "finish,1,finish_7949"
+          },
+          {
+            "value": "HIGH_SHINE",
+            "label_translation_key": "finish,1,finish_7941"
+          },
+          {
+            "value": "SHIMMER",
+            "label_translation_key": "finish,1,finish_7947"
+          },
+          {
+            "value": "METALLIC",
+            "label_translation_key": "finish,1,finish_7943"
+          },
+          {
+            "value": "GLITTER",
+            "label_translation_key": "finish,1,finish_7940"
+          }
+        ]
+      }
+    },
+    {
+      "key": "product_specifications",
+      "search_key": "filter_product_specifications",
+      "url_key": "product_specifications",
+      "app_url_key": "product_specifications",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.filter.product_specifications",
+      "position": 1020,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "VEGAN",
+            "label_translation_key": "product_specifications,1,product_specifications_7965"
+          },
+          {
+            "value": "MINERAL",
+            "label_translation_key": "product_specifications,1,product_specifications_7964"
+          },
+          {
+            "value": "HYPOALLERGENIC",
+            "label_translation_key": "product_specifications,1,product_specifications_7956"
+          },
+          {
+            "value": "OIL_FREE",
+            "label_translation_key": "product_specifications,1,product_specifications_7959"
+          },
+          {
+            "value": "ALCOHOL_FREE",
+            "label_translation_key": "product_specifications,1,product_specifications_7957"
+          },
+          {
+            "value": "SULFATE_FREE",
+            "label_translation_key": "product_specifications,1,product_specifications_7960"
+          },
+          {
+            "value": "FORMALDEHYDE_FREE",
+            "label_translation_key": "product_specifications,1,product_specifications_7961"
+          },
+          {
+            "value": "PABA_FREE",
+            "label_translation_key": "product_specifications,1,product_specifications_7962"
+          },
+          {
+            "value": "AMMONIA_FREE",
+            "label_translation_key": "product_specifications,1,product_specifications_7963"
+          }
+        ]
+      }
+    },
+    {
+      "key": "consistency",
+      "search_key": "filter_consistency_option",
+      "url_key": "consistency",
+      "app_url_key": "consistency",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.filter.consistency",
+      "position": 1030,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "CREAM_TO_POWDER",
+            "label_translation_key": "consistency_option,1.0.0,consistency_option_7932"
+          },
+          {
+            "value": "POWDER",
+            "label_translation_key": "consistency_option,1.0.0,consistency_option_7167"
+          },
+          {
+            "value": "LOOSE_POWDER",
+            "label_translation_key": "consistency_option,1.0.0,consistency_option_7925"
+          },
+          {
+            "value": "SALTS",
+            "label_translation_key": "consistency_option,1.0.0,consistency_option_7929"
+          },
+          {
+            "value": "BUBBLE_BATH",
+            "label_translation_key": "consistency_option,1.0.0,consistency_option_7935"
+          },
+          {
+            "value": "SPRAY",
+            "label_translation_key": "consistency_option,1.0.0,consistency_option_7177"
+          },
+          {
+            "value": "LIQUID",
+            "label_translation_key": "consistency_option,1.0.0,consistency_option_7924"
+          },
+          {
+            "value": "GEL",
+            "label_translation_key": "consistency_option,1.0.0,consistency_option_7168"
+          },
+          {
+            "value": "SERUM",
+            "label_translation_key": "consistency_option,1.0.0,consistency_option_7927"
+          },
+          {
+            "value": "LOTION",
+            "label_translation_key": "consistency_option,1.0.0,consistency_option_7926"
+          },
+          {
+            "value": "MOUSSE",
+            "label_translation_key": "consistency_option,1.0.0,consistency_option_7166"
+          },
+          {
+            "value": "ROLL-ON",
+            "label_translation_key": "consistency_option,1.0.0,consistency_option_7934"
+          },
+          {
+            "value": "CREAM",
+            "label_translation_key": "consistency_option,1.0.0,consistency_option_7161"
+          },
+          {
+            "value": "BALM",
+            "label_translation_key": "consistency_option,1.0.0,consistency_option_7931"
+          },
+          {
+            "value": "OIL",
+            "label_translation_key": "consistency_option,1.0.0,consistency_option_7169"
+          },
+          {
+            "value": "WAX",
+            "label_translation_key": "consistency_option,1.0.0,consistency_option_7933"
+          },
+          {
+            "value": "MASK",
+            "label_translation_key": "consistency_option,1.0.0,consistency_option_7176"
+          },
+          {
+            "value": "STICK",
+            "label_translation_key": "consistency_option,1.0.0,consistency_option_7930"
+          },
+          {
+            "value": "SOLID",
+            "label_translation_key": "consistency_option,1.0.0,consistency_option_7928"
+          },
+          {
+            "value": "PENCIL",
+            "label_translation_key": "consistency_option,1.0.0,consistency_option_7174"
+          }
+        ]
+      }
+    },
+    {
+      "key": "coverage",
+      "search_key": "coverage_key",
+      "url_key": "coverage",
+      "app_url_key": "coverage",
+      "sorting_strategy": "label",
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.filter.coverage",
+      "position": 1080,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "LIGHT",
+            "search_values": ["ao.coverage.7196"],
+            "label_translation_key": "coverage,1.0.0,coverage_7196"
+          },
+          {
+            "value": "MEDIUM",
+            "search_values": ["ao.coverage.7195"],
+            "label_translation_key": "coverage,1.0.0,coverage_7195"
+          },
+          {
+            "value": "FULL",
+            "search_values": ["ao.coverage.7193"],
+            "label_translation_key": "coverage,1.0.0,coverage_7193"
+          }
+        ]
+      }
+    },
+    {
+      "key": "hair_type",
+      "search_key": "filter_hair_type",
+      "url_key": "hair_type",
+      "app_url_key": "hair_type",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.filter.hair_type",
+      "position": 1040,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "FINE_HAIR",
+            "label_translation_key": "hair_type,1.0.0,hair_type_329"
+          },
+          {
+            "value": "OILY_HAIR",
+            "label_translation_key": "hair_type,1.0.0,hair_type_331"
+          },
+          {
+            "value": "DRY_HAIR",
+            "label_translation_key": "hair_type,1.0.0,hair_type_332"
+          },
+          {
+            "value": "DAMAGED_HAIR",
+            "label_translation_key": "hair_type,1.0.0,hair_type_7187"
+          },
+          {
+            "value": "NORMAL_HAIR",
+            "label_translation_key": "hair_type,1.0.0,hair_type_7188"
+          },
+          {
+            "value": "ALL_HAIR_TYPES",
+            "label_translation_key": "hair_type,1.0.0,hair_type_7974"
+          }
+        ]
+      }
+    },
+    {
+      "key": "sun_protection",
+      "search_key": "filter_sun_protection",
+      "url_key": "sun_protection",
+      "app_url_key": "sun_protection",
+      "sorting_strategy": "numeric_key",
+      "kind": "values",
+      "translation_strategy": "number_translation",
+      "label_translation_key": "catalog.filter.sun_protection",
+      "position": 1090,
+      "values_config": {
+      }
+    },
+    {
+      "key": "exclusive",
+      "search_key": "is_special_offer",
+      "url_key": "exclusive",
+      "app_url_key": "exclusive",
+      "sorting_strategy": "custom",
+      "kind": "single_value",
+      "translation_strategy": "boolean-zatra",
+      "position": 2050,
+      "label_translation_key": "specialOffer.flag",
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "true",
+            "label_translation_key": "specialOffer.flag"
+          }
+        ]
+      },
+      "visible": {
+        "state": "enabled",
+        "sales_channels": [
+          "es",
+          "ie",
+          "gb"
+        ]
+      }
+    },
+    {
+      "key": "family_skus",
+      "search_key": "family_sku",
+      "url_key": "family_sku",
+      "app_url_key": "family_sku",
+      "sorting_strategy": "label",
+      "kind": "values",
+      "translation_strategy": "identity",
+      "label_translation_key": "",
+      "position": 2000,
+      "visible": {
+        "state": "disabled"
+      },
+      "values_config": {}
+    },
+    {
+      "key": "article_domains",
+      "search_key": "filter_article_domain",
+      "url_key": "article_domain",
+      "app_url_key": "article_domain",
+      "sorting_strategy": "label",
+      "kind": "values",
+      "translation_strategy": "identity",
+      "label_translation_key": "",
+      "position": 2010,
+      "visible": {
+        "state": "disabled"
+      },
+      "values_config": {}
+    },
+    {
+      "key": "category_tag_ids",
+      "search_key": "tag",
+      "url_key": "category_tag_id",
+      "app_url_key": "category_tag_id",
+      "sorting_strategy": "label",
+      "kind": "values",
+      "translation_strategy": "identity",
+      "label_translation_key": "",
+      "position": 2020,
+      "visible": {
+        "state": "disabled"
+      },
+      "values_config": {}
+    },
+    {
+      "key": "fit_taxonomies",
+      "search_key": "fit_taxonomy_key",
+      "url_key": "fit_taxonomy",
+      "sorting_strategy": "custom",
+      "kind": "values",
+      "translation_strategy": "multi-source",
+      "translation_config": {
+        "multi_source": {
+          "strategies": [
+            "basic-zatra",
+            "master-attribute"
+          ]
+        }
+      },
+      "label_translation_key": "catalog.filter.fitTaxonomy",
+      "position": 295,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "SKINNY_FIT",
+            "search_values": ["ao.fit_taxonomy.8520"],
+            "label_translation_key": "fit_taxonomy,1.0.0,fit_taxonomy_8520"
+          },
+          {
+            "value": "SLIM_FIT",
+            "search_values": ["ao.fit_taxonomy.8521"],
+            "label_translation_key": "fit_taxonomy,1.0.0,fit_taxonomy_8521"
+          },
+          {
+            "value": "REGULAR_FIT",
+            "search_values": ["ao.fit_taxonomy.8522"],
+            "label_translation_key": "fit_taxonomy,1.0.0,fit_taxonomy_8522"
+          },
+          {
+            "value": "RELAXED_LOOSE_FIT",
+            "search_values": ["ao.fit_taxonomy.8518", "ao.fit_taxonomy.8524"],
+            "label_translation_key": "catalog.filter.fitTaxonomy.relaxed_loose"
+          },
+          {
+            "value": "OVERSIZED",
+            "search_values": ["ao.fit_taxonomy.8519"],
+            "label_translation_key": "fit_taxonomy,1.0.0,fit_taxonomy_8519"
+          }
+        ]
+      }
+    },
+    {
+      "key": "shapes",
+      "search_key": "shape_key",
+      "url_key": "shape",
+      "sorting_strategy": "custom",
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.filter.shape",
+      "position": 296,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "STRAIGHT",
+            "search_values": ["ao.shape.8509"],
+            "label_translation_key": "shape,1.0.0,shape_8509"
+          },
+          {
+            "value": "FITTED",
+            "search_values": ["ao.shape.8511"],
+            "label_translation_key": "shape,1.0.0,shape_8511"
+          },
+          {
+            "value": "FLARED",
+            "search_values": ["ao.shape.8513"],
+            "label_translation_key": "shape,1.0.0,shape_8513"
+          },
+          {
+            "value": "TAPERED",
+            "search_values": ["ao.shape.8514"],
+            "label_translation_key": "shape,1.0.0,shape_8514"
+          },
+          {
+            "value": "COCOON",
+            "search_values": ["ao.shape.8512"],
+            "label_translation_key": "shape,1.0.0,shape_8512"
+          },
+          {
+            "value": "BODY_HUGGING",
+            "search_values": ["ao.shape.8510"],
+            "label_translation_key": "shape,1.0.0,shape_8510"
+          }
+        ]
+      }
+    },
+    {
+      "key": "styles",
+      "search_key": "pandora.styles",
+      "url_key": "style",
+      "app_url_key": "style",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "fashion-tags",
+      "label_translation_key": "catalog.dialog.style.name",
+      "translation_config": {
+        "tag_config": {
+          "skip_value_uri_prefix": true
+        }
+      },
+      "position": 1400,
+      "post_processors": [
+        "fkg_intended_gender"
+      ]
+    },
+    {
+      "key": "designs",
+      "search_key": "pandora.designs",
+      "url_key": "design",
+      "app_url_key": "design",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "fashion-tags",
+      "label_translation_key": "catalog.dialog.design.name",
+      "translation_config": {
+        "tag_config": {
+          "skip_value_uri_prefix": true
+        }
+      },
+      "position": 1200,
+      "post_processors": [
+        "fkg_intended_gender"
+      ]
+    },
+    {
+      "key": "trends",
+      "search_key": "catalog_filters.tag_trend",
+      "url_key": "trend",
+      "app_url_key": "trend",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "custom"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "fashion-tags",
+      "label_translation_key": "mfa.headline.trend",
+      "position": 260,
+      "values_config": {
+        "search_value_transformation": {
+          "transformers": ["add_fkg_tag_uri_prefix"]
+        },
+        "fixed_values": [
+          {
+            "value": "90s_revival"
+          },
+          {
+            "value": "dark_glamour"
+          },
+          {
+            "value": "modern_tailoring"
+          },
+          {
+            "value": "new_boho"
+          },
+          {
+            "value": "sustainable_fashion"
+          },
+          {
+            "value": "statement_detailing"
+          },
+          {
+            "value": "urban_explorer"
+          },
+          {
+            "value": "new_denim"
+          },
+          {
+            "value": "cotton_denim"
+          },
+          {
+            "value": "baseball_cap"
+          },
+          {
+            "value": "embellished_shoes"
+          },
+          {
+            "value": "retrofuture"
+          },
+          {
+            "value": "dark_florals"
+          },
+          {
+            "value": "dark_summer"
+          },
+          {
+            "value": "denim_mini"
+          },
+          {
+            "value": "sheer_socks"
+          },
+          {
+            "value": "ethni_city"
+          },
+          {
+            "value": "fringe"
+          },
+          {
+            "value": "hi_rise_shorts"
+          },
+          {
+            "value": "playsuit"
+          },
+          {
+            "value": "layering"
+          },
+          {
+            "value": "logomania"
+          },
+          {
+            "value": "sequins"
+          },
+          {
+            "value": "summer_opulence"
+          },
+          {
+            "value": "summer_florals"
+          },
+          {
+            "value": "statement_pieces"
+          },
+          {
+            "value": "straight_hi_rise_jeans"
+          },
+          {
+            "value": "street_core"
+          },
+          {
+            "value": "timeless_future"
+          },
+          {
+            "value": "wide_legged_pants"
+          }
+        ]
+      },
+      "visible": {
+        "state": "disabled"
+      },
+      "post_processors": [
+        "fkg_intended_gender"
+      ]
+    },
+    {
+      "key": "skin_tone",
+      "search_key": "skin_tone_key",
+      "url_key": "skin_tone",
+      "app_url_key": "skin_tone",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.filter.skin_tone",
+      "position": 1070,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "ao.skin_tone.7938",
+            "label_translation_key": "skin_tone,1,skin_tone_7938"
+          },
+          {
+            "value": "ao.skin_tone.7937",
+            "label_translation_key": "skin_tone,1,skin_tone_7937"
+          },
+          {
+            "value": "ao.skin_tone.7939",
+            "label_translation_key": "skin_tone,1,skin_tone_7939"
+          },
+          {
+            "value": "ao.skin_tone.7936",
+            "label_translation_key": "skin_tone,1,skin_tone_7936"
+          }
+        ]
+      }
+    },
+    {
+      "key": "brush_hair_material",
+      "search_key": "brush_hair_material_key",
+      "url_key": "brush_hair_material",
+      "app_url_key": "brush_hair_material",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.filter.brush_hair_material",
+      "position": 1100,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "ao.brush_hair_material.7890",
+            "label_translation_key": "brush_hair_material,1,brush_hair_material_7890"
+          },
+          {
+            "value": "ao.brush_hair_material.7889",
+            "label_translation_key": "brush_hair_material,1,brush_hair_material_7889"
+          }
+        ]
+      }
+    },
+    {
+      "key": "hold_factor",
+      "search_key": "hold_factor_key",
+      "url_key": "hold_factor",
+      "app_url_key": "hold_factor",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.filter.hold_factor",
+      "position": 1110,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "ao.hold_factor.7953",
+            "label_translation_key": "hold_factor,1,hold_factor_7953"
+          },
+          {
+            "value": "ao.hold_factor.7951",
+            "label_translation_key": "hold_factor,1,hold_factor_7951"
+          },
+          {
+            "value": "ao.hold_factor.7950",
+            "label_translation_key": "hold_factor,1,hold_factor_7950"
+          },
+          {
+            "value": "ao.hold_factor.7952",
+            "label_translation_key": "hold_factor,1,hold_factor_7952"
+          }
+        ]
+      }
+    },
+    {
+      "key": "lash_volume",
+      "search_key": "lash_volume_key",
+      "url_key": "lash_volume",
+      "app_url_key": "lash_volume",
+      "sorting_strategy": "multi-source",
+      "sorting_config": {
+        "multi_source": {
+          "strategies": [
+            "recommended-values",
+            "label"
+          ]
+        }
+      },
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.filter.lash_volume",
+      "position": 1120,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "ao.lash_volume.7967",
+            "label_translation_key": "lash_volume,1,lash_volume_7967"
+          },
+          {
+            "value": "ao.lash_volume.7968",
+            "label_translation_key": "lash_volume,1,lash_volume_7968"
+          },
+          {
+            "value": "ao.lash_volume.7969",
+            "label_translation_key": "lash_volume,1,lash_volume_7969"
+          }
+        ]
+      }
+    },
+    {
+      "key": "fr_delivery_24h",
+      "search_key": "catalog_filters.warehouse_dominance_confidence_60",
+      "url_key": "livraison-24h",
+      "app_url_key": "livraison-24h",
+      "sorting_strategy": "custom",
+      "kind": "single_value",
+      "translation_strategy": "boolean-zatra",
+      "position": 1570,
+      "label_translation_key": "catalog.filter.fr_delivery_24h.label",
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "true",
+            "search_values": [
+              "21"
+            ],
+            "label_translation_key": "catalog.filter.fr_delivery_24h.label"
+          }
+        ]
+      },
+      "visible": {
+        "state": "enabled",
+        "sales_channels": [
+          "fr"
+        ]
+      }
+    },
+    {
+      "key": "fr_delivery_fast",
+      "search_key": "catalog_filters.warehouse_dominance_confidence_60",
+      "url_key": "livraison-rapide",
+      "app_url_key": "livraison-rapide",
+      "sorting_strategy": "custom",
+      "kind": "values",
+      "translation_strategy": "boolean-zatra",
+      "position": 1580,
+      "label_translation_key": "catalog.filter.fr_delivery_fast.label",
+      "visible": {
+        "state": "disabled"
+      },
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "true",
+            "search_values": [
+              "21"
+            ],
+            "label_translation_key": "catalog.filter.fr_delivery_fast.label",
+            "visible": {
+              "state": "enabled",
+              "sales_channels": [
+                "fr"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "key": "football_clubs",
+      "search_key": "football_club_key",
+      "url_key": "football_club",
+      "app_url_key": "football_club",
+      "sorting_strategy": "label",
+      "kind": "values",
+      "translation_strategy": "dynamic-master-attribute",
+      "label_translation_key": "catalog.filter.football_club.label",
+      "position": 120,
+      "values_config": {},
+      "translation_config": {
+        "master_attribute": {
+          "type_id": "football_club",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "key": "silhouettes",
+      "search_key": "silhouette_code",
+      "url_key": "silhouette",
+      "app_url_key": "silhouette",
+      "sorting_strategy": "label",
+      "kind": "values",
+      "translation_strategy": "identity",
+      "label_translation_key": "mfa.headline.trend",
+      "position": 2110,
+      "values_config": {},
+      "visible": {
+        "state": "disabled"
+      }
+    },
+    {
+      "key": "eans",
+      "search_key": "ean",
+      "url_key": "ean",
+      "app_url_key": "ean",
+      "sorting_strategy": "label",
+      "kind": "values",
+      "translation_strategy": "identity",
+      "label_translation_key": "",
+      "position": 2040,
+      "visible": {
+        "state": "disabled"
+      },
+      "values_config": {}
+    },
+    {
+      "key": "evening_delivery",
+      "search_key": "catalog_filters.delivery_convenience_warehouse_groups",
+      "url_key": "ed",
+      "app_url_key": "ed",
+      "sorting_strategy": "label",
+      "kind": "values",
+      "translation_strategy": "basic-zatra",
+      "label_translation_key": "no.translation",
+      "position": 1590,
+      "visible": {
+        "state": "disabled"
+      },
+      "values_config": {
+        "label_translation_key_pattern": "catalog.filter.evening_delivery.selected",
+        "fixed_values": [
+          {
+            "value": "de_b",
+            "url_translation_key": "catalog.filter.evening_delivery.de_berlin.url_key"
+          },
+          {
+            "value": "de_rrf",
+            "url_translation_key": "catalog.filter.evening_delivery.de_rrf.url_key"
+          }
+        ]
+      }
+    },
+    {
+      "key": "product_groups",
+      "search_key": "product_group",
+      "url_key": "product_group",
+      "app_url_key": "product_group",
+      "sorting_strategy": "label",
+      "kind": "values",
+      "translation_strategy": "basic-zatra",
+      "label_translation_key": "catalog.article.categorie",
+      "position": 100,
+      "values_config": {
+        "label_translation_key_pattern": "cms.page.classification.category.{{value}}",
+        "fixed_values": [
+          {
+            "value": "clothing",
+            "search_values": [
+              "clothing",
+              "beach_wear"
+            ]
+          },
+          {
+            "value": "shoe",
+            "label_translation_key": "cms.page.classification.category.shoes"
+          },
+          {
+            "value": "accessoires"
+          },
+          {
+            "value": "beauty"
+          },
+          {
+            "value": "underwear",
+            "search_values": [
+              "underwear",
+              "nightwear"
+            ],
+            "label_translation_key": "mobile.app.categories.men.underwear"
+          }
+        ]
+      },
+      "visibility_rules": {
+        "use_case_whitelist": [
+          "CURATED-COLLECTIONS"
+        ]
+      }
+    },
+    {
+      "key": "multipack",
+      "search_key": "number_of_articles_in_multipack",
+      "url_key": "multipack",
+      "app_url_key": "multipack",
+      "sorting_strategy": "numeric_key",
+      "kind": "values",
+      "translation_strategy": "zatra-value-pattern",
+      "label_translation_key": "filter.label.multipack",
+      "position": 226,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "1",
+            "label_translation_key": "filter.options.multipack.single",
+            "visible": {
+              "state": "disabled"
+            }
+          },
+          {
+            "value": "0",
+            "visible": {
+              "state": "disabled"
+            }
+          }
+        ]
+      },
+      "translation_config": {
+        "pattern_zatra_config": {
+          "zatra_key": "filter.options.multipack"
+        }
+      }
+    },
+    {
+      "key": "mask_certificates",
+      "search_key": "tag",
+      "url_key": "mask_certificate",
+      "app_url_key": "mask_certificate",
+      "sorting_strategy": "custom",
+      "kind": "values",
+      "translation_strategy": "basic-zatra",
+      "position": 227,
+      "label_translation_key": "catalog.filter.mask_certificate",
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "ffp2",
+            "search_values": [
+              "2215"
+            ],
+            "label_translation_key": "catalog.filter.mask_certificate.ffp2"
+          },
+          {
+            "value": "medical",
+            "search_values": [
+              "2214"
+            ],
+            "label_translation_key": "catalog.filter.mask_certificate.medical"
+          }
+        ]
+      }
+    },
+    {
+      "key": "scent_note",
+      "search_key": "scent_note_key",
+      "url_key": "scent_note",
+      "app_url_key": "scent_note",
+      "sorting_strategy": "label",
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.filter.scent_note",
+      "position": 500,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "aquatic",
+            "search_values": [
+              "ao.scent_note.aquatic"
+            ],
+            "label_translation_key": "scent_note,1,scent_note_aquatic"
+          },
+          {
+            "value": "floral",
+            "search_values": [
+              "ao.scent_note.floral"
+            ],
+            "label_translation_key": "scent_note,1,scent_note_floral"
+          },
+          {
+            "value": "fresh",
+            "search_values": [
+              "ao.scent_note.fresh"
+            ],
+            "label_translation_key": "scent_note,1,scent_note_fresh"
+          },
+          {
+            "value": "fruity",
+            "search_values": [
+              "ao.scent_note.fruity"
+            ],
+            "label_translation_key": "scent_note,1,scent_note_fruity"
+          },
+          {
+            "value": "powdery",
+            "search_values": [
+              "ao.scent_note.powdery"
+            ],
+            "label_translation_key": "scent_note,1,scent_note_powdery"
+          },
+          {
+            "value": "spicy",
+            "search_values": [
+              "ao.scent_note.spicy"
+            ],
+            "label_translation_key": "scent_note,1,scent_note_spicy"
+          },
+          {
+            "value": "woody",
+            "search_values": [
+              "ao.scent_note.woody"
+            ],
+            "label_translation_key": "scent_note,1,scent_note_woody"
+          }
+        ]
+      }
+    },
+    {
+      "key": "fast_delivery",
+      "search_key": "convenience.show_fastest_flag",
+      "url_key": "fast_delivery",
+      "app_url_key": "fast_delivery",
+      "sorting_strategy": "label",
+      "kind": "single_value",
+      "translation_strategy": "boolean-zatra",
+      "label_translation_key": "product.flag.delivery.fast",
+      "position": 550,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "true",
+            "label_translation_key": "product.flag.delivery.fast"
+          }
+        ]
+      },
+      "visible": {
+        "state": "enabled",
+        "sales_channels": [
+          "se",
+          "fi",
+          "es",
+          "dk",
+          "no"
+        ]
+      }
+    },
+    {
+      "key": "standard_delivery_type",
+      "search_key": "delivery_types",
+      "simple_search_key": "simples.delivery_type",
+      "url_key": "standard_delivery_type",
+      "app_url_key": "standard_delivery_type",
+      "sorting_strategy": "label",
+      "kind": "single_value",
+      "translation_strategy": "boolean-zatra",
+      "label_translation_key": "catalog.filter.delivery.standard",
+      "position": 550,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "true",
+            "search_values": [
+              "STANDARD",
+              "FAST"
+            ],
+            "media_key": "standard_delivery_filter",
+            "label_translation_key": "catalog.filter.delivery.standard"
+          }
+        ]
+      },
+      "visible": {
+        "state": "enabled",
+        "sales_channels": [
+          "it"
+        ]
+      }
+    },
+    {
+      "key": "sold_by_zalando",
+      "search_key": "zalando_merchant_ids",
+      "simple_search_key": "simples.zalando_merchant_id",
+      "url_key": "sold_by_zalando",
+      "sorting_strategy": "label",
+      "kind": "single_value",
+      "translation_strategy": "boolean-zatra",
+      "label_translation_key": "catalog.filter.soldByZalando",
+      "position": 1555,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "true",
+            "search_values": [
+              "810d1d00-4312-43e5-bd31-d8373fdd24c7"
+            ],
+            "url_translation_key": "boolean.true",
+            "label_translation_key": "catalog.filter.soldByZalando"
+          }
+        ]
+      }
+    },
+    {
+      "key": "licensed_characters",
+      "search_key": "licensed_characters_key",
+      "url_key": "licensed_character",
+      "app_url_key": "licensed_character",
+      "sorting_strategy": "label",
+      "kind": "values",
+      "translation_strategy": "master-attribute",
+      "label_translation_key": "catalog.filter.licensed_characters",
+      "position": 228,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "lego",
+            "search_values": [
+              "ao.licensed_characters.8627"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8627"
+          },
+          {
+            "value": "mickey_mouse_and_friends",
+            "search_values": [
+              "ao.licensed_characters.8628"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8628"
+          },
+          {
+            "value": "frozen",
+            "search_values": [
+              "ao.licensed_characters.8629"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8629"
+          },
+          {
+            "value": "marvel",
+            "search_values": [
+              "ao.licensed_characters.8630"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8630"
+          },
+          {
+            "value": "fortnite",
+            "search_values": [
+              "ao.licensed_characters.8632"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8632"
+          },
+          {
+            "value": "paw_patrol",
+            "search_values": [
+              "ao.licensed_characters.8633"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8633"
+          },
+          {
+            "value": "disney",
+            "search_values": [
+              "ao.licensed_characters.8634"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8634"
+          },
+          {
+            "value": "dc_comics",
+            "search_values": [
+              "ao.licensed_characters.8635"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8635"
+          },
+          {
+            "value": "peppa_pig",
+            "search_values": [
+              "ao.licensed_characters.8636"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8636"
+          },
+          {
+            "value": "disney_classics",
+            "search_values": [
+              "ao.licensed_characters.8637"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8637"
+          },
+          {
+            "value": "pippi_longstocking",
+            "search_values": [
+              "ao.licensed_characters.8638"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8638"
+          },
+          {
+            "value": "playmobil",
+            "search_values": [
+              "ao.licensed_characters.8639"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8639"
+          },
+          {
+            "value": "other",
+            "search_values": [
+              "ao.licensed_characters.8640"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8640"
+          },
+          {
+            "value": "nasa",
+            "search_values": [
+              "ao.licensed_characters.8641"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8641"
+          },
+          {
+            "value": "band_tees",
+            "search_values": [
+              "ao.licensed_characters.8642"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8642"
+          },
+          {
+            "value": "disney_pixar",
+            "search_values": [
+              "ao.licensed_characters.8643"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8643"
+          },
+          {
+            "value": "looney_tunes",
+            "search_values": [
+              "ao.licensed_characters.8644"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8644"
+          },
+          {
+            "value": "star_wars",
+            "search_values": [
+              "ao.licensed_characters.8645"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8645"
+          },
+          {
+            "value": "naruto",
+            "search_values": [
+              "ao.licensed_characters.8646"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8646"
+          },
+          {
+            "value": "peanuts",
+            "search_values": [
+              "ao.licensed_characters.8647"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8647"
+          },
+          {
+            "value": "miss_melody",
+            "search_values": [
+              "ao.licensed_characters.8648"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8648"
+          },
+          {
+            "value": "dragon_ball",
+            "search_values": [
+              "ao.licensed_characters.8649"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8649"
+          },
+          {
+            "value": "top_model",
+            "search_values": [
+              "ao.licensed_characters.8650"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8650"
+          },
+          {
+            "value": "disney_princess",
+            "search_values": [
+              "ao.licensed_characters.8651"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8651"
+          },
+          {
+            "value": "hot_wheels",
+            "search_values": [
+              "ao.licensed_characters.8652"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8652"
+          },
+          {
+            "value": "the_flintstones",
+            "search_values": [
+              "ao.licensed_characters.8653"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8653"
+          },
+          {
+            "value": "winnie_the_pooh",
+            "search_values": [
+              "ao.licensed_characters.8654"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8654"
+          },
+          {
+            "value": "lego_ninjago",
+            "search_values": [
+              "ao.licensed_characters.8655"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8655"
+          },
+          {
+            "value": "sonic_the_hedgehog",
+            "search_values": [
+              "ao.licensed_characters.8656"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8656"
+          },
+          {
+            "value": "the_simpsons",
+            "search_values": [
+              "ao.licensed_characters.8657"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8657"
+          },
+          {
+            "value": "harry_potter",
+            "search_values": [
+              "ao.licensed_characters.8658"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8658"
+          },
+          {
+            "value": "hello_kitty",
+            "search_values": [
+              "ao.licensed_characters.8659"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8659"
+          },
+          {
+            "value": "pokémon",
+            "search_values": [
+              "ao.licensed_characters.8660"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8660"
+          },
+          {
+            "value": "minions",
+            "search_values": [
+              "ao.licensed_characters.8661"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8661"
+          },
+          {
+            "value": "national_geographic",
+            "search_values": [
+              "ao.licensed_characters.8662"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8662"
+          },
+          {
+            "value": "e.t.",
+            "search_values": [
+              "ao.licensed_characters.8663"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8663"
+          },
+          {
+            "value": "friends",
+            "search_values": [
+              "ao.licensed_characters.8664"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8664"
+          },
+          {
+            "value": "godzilla",
+            "search_values": [
+              "ao.licensed_characters.8665"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8665"
+          },
+          {
+            "value": "die_sendung_mit_der_maus",
+            "search_values": [
+              "ao.licensed_characters.8666"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8666"
+          },
+          {
+            "value": "motorsports",
+            "search_values": [
+              "ao.licensed_characters.8667"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8667"
+          },
+          {
+            "value": "bibi_and_tina",
+            "search_values": [
+              "ao.licensed_characters.8668"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8668"
+          },
+          {
+            "value": "spongebob_squarepants",
+            "search_values": [
+              "ao.licensed_characters.8669"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8669"
+          },
+          {
+            "value": "kill_bill",
+            "search_values": [
+              "ao.licensed_characters.8670"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8670"
+          },
+          {
+            "value": "smiley",
+            "search_values": [
+              "ao.licensed_characters.8671"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8671"
+          },
+          {
+            "value": "emoji",
+            "search_values": [
+              "ao.licensed_characters.8672"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8672"
+          },
+          {
+            "value": "mtv",
+            "search_values": [
+              "ao.licensed_characters.8673"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8673"
+          },
+          {
+            "value": "sailor_moon",
+            "search_values": [
+              "ao.licensed_characters.8674"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8674"
+          },
+          {
+            "value": "powerpuff_girls",
+            "search_values": [
+              "ao.licensed_characters.8675"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8675"
+          },
+          {
+            "value": "tom_and_jerry",
+            "search_values": [
+              "ao.licensed_characters.8676"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8676"
+          },
+          {
+            "value": "super_mario",
+            "search_values": [
+              "ao.licensed_characters.8677"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8677"
+          },
+          {
+            "value": "care_bears",
+            "search_values": [
+              "ao.licensed_characters.8678"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8678"
+          },
+          {
+            "value": "nintendo",
+            "search_values": [
+              "ao.licensed_characters.8679"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8679"
+          },
+          {
+            "value": "casper",
+            "search_values": [
+              "ao.licensed_characters.8680"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8680"
+          },
+          {
+            "value": "my_little_pony",
+            "search_values": [
+              "ao.licensed_characters.8681"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8681"
+          },
+          {
+            "value": "rugrats",
+            "search_values": [
+              "ao.licensed_characters.8682"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8682"
+          },
+          {
+            "value": "garfield",
+            "search_values": [
+              "ao.licensed_characters.8683"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8683"
+          },
+          {
+            "value": "jurassic_park",
+            "search_values": [
+              "ao.licensed_characters.8684"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8684"
+          },
+          {
+            "value": "scooby-doo",
+            "search_values": [
+              "ao.licensed_characters.8685"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8685"
+          },
+          {
+            "value": "coca-cola",
+            "search_values": [
+              "ao.licensed_characters.8686"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8686"
+          },
+          {
+            "value": "sesame_street",
+            "search_values": [
+              "ao.licensed_characters.8687"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8687"
+          },
+          {
+            "value": "betty_boop",
+            "search_values": [
+              "ao.licensed_characters.8688"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8688"
+          },
+          {
+            "value": "ghostbusters",
+            "search_values": [
+              "ao.licensed_characters.8689"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8689"
+          },
+          {
+            "value": "the_smurfs",
+            "search_values": [
+              "ao.licensed_characters.8690"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8690"
+          },
+          {
+            "value": "popeye",
+            "search_values": [
+              "ao.licensed_characters.8691"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8691"
+          },
+          {
+            "value": "bob_the_builder",
+            "search_values": [
+              "ao.licensed_characters.8692"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8692"
+          },
+          {
+            "value": "stranger_things",
+            "search_values": [
+              "ao.licensed_characters.8693"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8693"
+          },
+          {
+            "value": "denver_the_last_dinosaur",
+            "search_values": [
+              "ao.licensed_characters.8694"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8694"
+          },
+          {
+            "value": "batman",
+            "search_values": [
+              "ao.licensed_characters.8695"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8695"
+          },
+          {
+            "value": "woozle_goozle",
+            "search_values": [
+              "ao.licensed_characters.8696"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8696"
+          },
+          {
+            "value": "he_man_and_the_masters_of_the_universe",
+            "search_values": [
+              "ao.licensed_characters.8697"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8697"
+          },
+          {
+            "value": "bakugan",
+            "search_values": [
+              "ao.licensed_characters.8698"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8698"
+          },
+          {
+            "value": "yakari",
+            "search_values": [
+              "ao.licensed_characters.8699"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8699"
+          },
+          {
+            "value": "wickie",
+            "search_values": [
+              "ao.licensed_characters.8700"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8700"
+          },
+          {
+            "value": "tkkg",
+            "search_values": [
+              "ao.licensed_characters.8701"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8701"
+          },
+          {
+            "value": "shaun_the_sheep",
+            "search_values": [
+              "ao.licensed_characters.8702"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8702"
+          },
+          {
+            "value": "pumuckl",
+            "search_values": [
+              "ao.licensed_characters.8703"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8703"
+          },
+          {
+            "value": "monster_high",
+            "search_values": [
+              "ao.licensed_characters.8704"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8704"
+          },
+          {
+            "value": "pettersson_und_findus",
+            "search_values": [
+              "ao.licensed_characters.8705"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8705"
+          },
+          {
+            "value": "capt_n_sharky",
+            "search_values": [
+              "ao.licensed_characters.8706"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8706"
+          },
+          {
+            "value": "minecraft",
+            "search_values": [
+              "ao.licensed_characters.8707"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8707"
+          },
+          {
+            "value": "power_rangers",
+            "search_values": [
+              "ao.licensed_characters.8708"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8708"
+          },
+          {
+            "value": "bluey",
+            "search_values": [
+              "ao.licensed_characters.8709"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8709"
+          },
+          {
+            "value": "polly_pocket",
+            "search_values": [
+              "ao.licensed_characters.8710"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8710"
+          },
+          {
+            "value": "the_avengers",
+            "search_values": [
+              "ao.licensed_characters.8711"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8711"
+          },
+          {
+            "value": "baby_shark",
+            "search_values": [
+              "ao.licensed_characters.8712"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8712"
+          },
+          {
+            "value": "thomas_the_tank_engine",
+            "search_values": [
+              "ao.licensed_characters.8713"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8713"
+          },
+          {
+            "value": "sylvanian_families",
+            "search_values": [
+              "ao.licensed_characters.8714"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8714"
+          },
+          {
+            "value": "transformers",
+            "search_values": [
+              "ao.licensed_characters.8715"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8715"
+          },
+          {
+            "value": "monopoly",
+            "search_values": [
+              "ao.licensed_characters.8716"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8716"
+          },
+          {
+            "value": "enchantimals",
+            "search_values": [
+              "ao.licensed_characters.8717"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8717"
+          },
+          {
+            "value": "trolls",
+            "search_values": [
+              "ao.licensed_characters.8718"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8718"
+          },
+          {
+            "value": "miraculous",
+            "search_values": [
+              "ao.licensed_characters.8719"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8719"
+          },
+          {
+            "value": "funko_pop",
+            "search_values": [
+              "ao.licensed_characters.8720"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8720"
+          },
+          {
+            "value": "cocomelon",
+            "search_values": [
+              "ao.licensed_characters.8721"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8721"
+          },
+          {
+            "value": "die_drei",
+            "search_values": [
+              "ao.licensed_characters.8722"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8722"
+          },
+          {
+            "value": "super_wings",
+            "search_values": [
+              "ao.licensed_characters.8723"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8723"
+          },
+          {
+            "value": "pj_masks",
+            "search_values": [
+              "ao.licensed_characters.8724"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8724"
+          },
+          {
+            "value": "rainbow_high",
+            "search_values": [
+              "ao.licensed_characters.8725"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8725"
+          },
+          {
+            "value": "na_na_na_surprise",
+            "search_values": [
+              "ao.licensed_characters.8726"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8726"
+          },
+          {
+            "value": "l_o_l_surprise",
+            "search_values": [
+              "ao.licensed_characters.8727"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8727"
+          },
+          {
+            "value": "janosch",
+            "search_values": [
+              "ao.licensed_characters.8728"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8728"
+          },
+          {
+            "value": "bibi_blocksberg",
+            "search_values": [
+              "ao.licensed_characters.8729"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8729"
+          },
+          {
+            "value": "fireman_sam",
+            "search_values": [
+              "ao.licensed_characters.8730"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8730"
+          },
+          {
+            "value": "benjamin_bluemchen",
+            "search_values": [
+              "ao.licensed_characters.8731"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8731"
+          },
+          {
+            "value": "barbie",
+            "search_values": [
+              "ao.licensed_characters.8732"
+            ],
+            "label_translation_key": "licensed_characters,1.0.0,licensed_characters_8732"
+          }
+        ]
+      }
+    },
+    {
+      "key": "aep_attribute_confidence_flags",
+      "search_key": "aep_attribute_confidence_flags_key",
+      "url_key": "aep_attribute_confidence_flag",
+      "app_url_key": "aep_attribute_confidence_flag",
+      "sorting_strategy": "label",
+      "kind": "values",
+      "translation_strategy": "identity",
+      "label_translation_key": ""
+    },
+    {
+      "key": "skip_promotions",
+      "search_key": "skip_promotions",
+      "url_key": "skip_promotions",
+      "sorting_strategy": "label",
+      "kind": "single_value",
+      "translation_strategy": "boolean-zatra",
+      "label_translation_key": "filter.description.skip_promotions",
+      "position": 2,
+      "visible": {
+        "state": "disabled"
+      },
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "true",
+            "label_translation_key": "catalog.article.skip_promotions"
+          }
+        ]
+      }
+    },
+    {
+      "key": "promotion_sources",
+      "search_key": "promotion_sources",
+      "url_key": "promotion_sources",
+      "sorting_strategy": "label",
+      "kind": "values",
+      "translation_strategy": "identity",
+      "label_translation_key": "",
+      "position": 200,
+      "visible": {
+        "state": "disabled"
+      }
+    },
+    {
+      "key": "our_brand_selection",
+      "search_key": "brand_code",
+      "url_key": "our_brand_selection",
+      "sorting_strategy": "label",
+      "kind": "single_value",
+      "translation_strategy": "boolean-zatra",
+      "label_translation_key": "filter.label.premiumbrands",
+      "position": 99991,
+      "values_config": {
+        "fixed_values": [
+          {
+            "value": "true",
+            "search_values": [
+              "AD1",
+              "NI9",
+              "ZI1"
+            ],
+            "url_translation_key": "boolean.true",
+            "label_translation_key": "filter.label.premiumbrands"
+          }
+        ]
+      }
+    },
+    {
+      "key": "adaptive_features",
+      "search_key": "catalog_filters.tag_adaptive_attribute",
+      "select_all_enabled": false,
+      "url_key": "adaptive_features",
+      "app_url_key": "adaptive_features",
+      "sorting_strategy": "label",
+      "kind": "values",
+      "translation_strategy": "fashion-tags",
+      "label_translation_key": "adaptive.catalog.filter.features.heading",
+      "translation_config": {
+        "tag_config": {
+          "skip_value_uri_prefix": true
+        }
+      },
+      "position": 298,
+      "post_processors": [
+        "fkg_intended_gender"
+      ],
+      "values_config": {
+        "search_value_transformation": {
+          "transformers": ["add_fkg_tag_uri_prefix"]
+        }
+      },
+      "visible": {
+        "state": "enabled",
+        "conditions": [
+          {
+            "experiment": {
+              "source": "octopus",
+              "identifier": "12361cf5-85ea-4373-adcc-66485914c23b",
+              "variant": "ENABLE_ADAPTIVE_FEATURES_FILTER"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "filter_groups": [
+    {
+      "id": "prices",
+      "label_translation_key": "catalog.article.price",
+      "keys": [
+        "prices",
+        "sales",
+        "free_delivery"
+      ]
+    },
+    {
+      "id": "brands",
+      "label_translation_key": "catalog.article.brand",
+      "keys": [
+        "our_brand_selection",
+        "followed_brands",
+        "brands"
+      ],
+      "special_label_filter_key": "followed_brands"
+    },
+    {
+      "id": "sizes",
+      "label_translation_key": "catalog.article.size",
+      "keys": [
+        "your_sizes",
+        "sizes"
+      ],
+      "special_label_filter_key": "your_sizes"
+    },
+    {
+      "id": "delivery",
+      "label_translation_key": "filter.delivery.label",
+      "keys": [
+        "zalando_plus",
+        "shipped_by_zalando",
+        "connected_retail",
+        "fr_delivery_24h",
+        "fast_delivery",
+        "standard_delivery_type",
+        "fast_delivery_type",
+        "sold_by_zalando"
+      ]
+    },
+    {
+      "id": "sustainable",
+      "label_translation_key": "filter.sustainable.label",
+      "keys": [
+        "sustainable"
+      ]
+    },
+    {
+      "id": "vegan",
+      "label_translation_key": "filter.label.vegan",
+      "keys": [
+        "vegan"
+      ]
+    },
+    {
+      "id": "exclusive",
+      "label_translation_key": "specialOffer.flag",
+      "keys": [
+        "exclusive"
+      ]
+    }
+  ],
+  "non_faceting_filters": [
+    "followed_brands",
+    "your_sizes",
+    "skip_your_brands",
+    "skip_promotions",
+    "promotion_sources"
+  ],
+  "skip_filters": [
+    "skip_your_brands",
+    "skip_promotions",
+    "promotion_sources"
+  ],
+  "blocked_hidden_filters": [
+    "categories",
+    "brand_families",
+    "your_brands"
+  ],
+  "monitored_filters": [
+    "sizes",
+    "prices",
+    "colors",
+    "lengths",
+    "occasions",
+    "upper_materials",
+    "sales",
+    "brands",
+    "your_sizes"
+  ]
+}
